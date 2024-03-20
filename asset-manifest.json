@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Ape-NFT/static/css/main.7acaea2f.css",
-    "main.js": "/Ape-NFT/static/js/main.07d3183d.js",
+    "main.js": "/Ape-NFT/static/js/main.17f7dfb4.js",
     "index.html": "/Ape-NFT/index.html",
     "main.7acaea2f.css.map": "/Ape-NFT/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/Ape-NFT/static/js/main.07d3183d.js.map"
+    "main.17f7dfb4.js.map": "/Ape-NFT/static/js/main.17f7dfb4.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/js/main.17f7dfb4.js"
   ]
 }
