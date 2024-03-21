@@ -144,7 +144,11 @@ export const Button = styled.button`
   padding: 10px 70px 12px;
   border-radius: 8px;
   border: none;
-  background-color: rgba(30, 30, 30, 0.1);
+  background-color: var(--btn-color);
+
+  &:hover span {
+    color: var(--primary-text-color);
+  }
 
   @media screen and (min-width: 768px) {
     width: 190px;
@@ -164,6 +168,7 @@ export const Span = styled.span`
   font-weight: 900;
   font-size: 16px;
   line-height: 1.19;
+  transition: color var(--tra);
 
   @media screen and (min-width: 1280px) {
     font-size: 28px;

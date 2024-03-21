@@ -29,7 +29,7 @@ export const Hero = () => {
           <Image src={Pic} alt="Hero Ape" />
 
           <InnerWrap>
-            <Button>
+            <Button type='button'>
               <Span>MEET APES</Span>
             </Button>
 
