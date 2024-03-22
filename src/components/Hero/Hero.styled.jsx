@@ -1,18 +1,44 @@
 import styled from '@emotion/styled';
 
 export const StyledSection = styled.section`
-  padding-top: 54px;
+  margin-top: 54px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 36px;
+  padding-bottom: 19px;
+  border-radius: 12px;
+  background-color: var(--accent-color);
+
+  @media screen and (min-width: 360px) and (max-width: 480px) {
+    width: 96%;
+  }
+
+  @media screen and (min-width: 481px) {
+    max-width: 462px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 736px;
+    padding-top: 123px;
+    padding-bottom: 123px;
+    border-radius: 16px;
+  }
 
   @media screen and (min-width: 1280px) {
-    padding-top: 16px;
+    max-width: 1408px;
+    margin-top: 16px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    border-radius: 24px;
   }
 `;
 
 export const StyledContainer = styled.div`
+  position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 64px;
+  padding-right: 64px;
   width: 100%;
   text-align: center;
 
@@ -22,32 +48,15 @@ export const StyledContainer = styled.div`
 
   @media screen and (min-width: 768px) {
     max-width: 768px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 72px;
+    padding-right: 72px;
     text-align: start;
   }
 
   @media screen and (min-width: 1280px) {
     max-width: 1280px;
-  }
-`;
-
-export const Wrap = styled.div`
-  width: 100%;
-  padding-top: 36px;
-  padding-bottom: 19px;
-  border-radius: 12px;
-  background-color: var(--accent-color);
-
-  @media screen and (min-width: 768px) {
-    position: relative;
-    padding: 124px 72px 123px;
-    border-radius: 16px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    padding: 200px 114px 200px;
-    border-radius: 24px;
+    padding-left: 130px;
+    padding-right: 130px;
   }
 `;
 
@@ -108,14 +117,15 @@ export const Image = styled.img`
     height: 373px;
     margin-top: 0;
     position: absolute;
-    bottom: 0;
-    left: 213px;
+    bottom: -123px;
+    left: 210px;
   }
 
   @media screen and (min-width: 1280px) {
     width: 463px;
     height: 612px;
-    left: 370px;
+    bottom: -200px;
+    left: 380px;
   }
 `;
 
@@ -128,14 +138,14 @@ export const InnerWrap = styled.div`
     flex-direction: column-reverse;
     gap: 16px;
     position: absolute;
-    bottom: 35px;
+    bottom: -90px;
     right: 72px;
   }
 
   @media screen and (min-width: 1280px) {
     gap: 28px;
-    bottom: 80px;
-    right: 114px;
+    bottom: -125px;
+    right: 130px;
   }
 `;
 
@@ -162,7 +172,7 @@ export const Button = styled.button`
   }
 `;
 
-export const Span = styled.span`
+export const BtnLabel = styled.span`
   color: var(--secondary-text-color);
   font-family: 'Right Grotesk';
   font-weight: 900;
