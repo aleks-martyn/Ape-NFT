@@ -1,9 +1,56 @@
 @import-normalize;
 
+@font-face {
+  font-family: 'Messina Sans Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('MessinaSansMono Regular'), local('MessinaSansMono-Regular'),
+    url('./fonts/MessinaSansMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Right Grotesk';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Right Grotesk'), local('Right-Grotesk'),
+    url('./fonts/RightGrotesk-CompactBlack.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Biro Script Plus';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Biro Script Plus'), local('Biro-Script-Plus'),
+    url('./fonts/BiroScriptPlus.ttf') format('truetype');
+}
+
+:root {
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #1e1e1e;
+  --background-color: #181818;
+  --accent-color: #dc3b5a;
+  --btn-color: rgba(30, 30, 30, 0.1);
+  --modal-btn-bg-color: rgba(255, 255, 255, 0.1);
+  --tra: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  color: var(--primary-text-color);
+  background-color: var(--background-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Messina Sans Mono',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,4 +59,25 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.no-scroll {
+  height: 100%;
+  overflow: hidden;
 }
