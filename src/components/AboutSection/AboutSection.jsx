@@ -16,8 +16,11 @@ import {
   CrossIcon,
   Image,
   BannerWrap,
+  BanerTextWrap,
   BanerText,
 } from './AboutSection.styled';
+
+const banerSlogans = ['Destroy stereotypes', 'HAVE NO LIMITS', 'Break rules'];
 
 export const AboutSection = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
@@ -69,9 +72,13 @@ export const AboutSection = () => {
       </Container>
 
       <BannerWrap>
-        <BanerText>HAVE NO LIMITS</BanerText>
+        {banerSlogans.map((slogan, index) => (
+          <BanerTextWrap key={index}>
+            <BanerText>{slogan}</BanerText>
 
-        <CrossIcon width="36px" height="36px" />
+            <CrossIcon width="36px" height="36px" />
+          </BanerTextWrap>
+        ))}
       </BannerWrap>
     </StyledSection>
   );

@@ -161,10 +161,21 @@ export const BannerWrap = styled.div`
   gap: 24px;
   padding: 6px 0 8px;
   background-color: var(--accent-color);
+  overflow: hidden;
 
   @media screen and (min-width: 1280px) {
     gap: 36px;
     padding: 6px 0 16px;
+  }
+`;
+
+export const BanerTextWrap = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  @media screen and (min-width: 1280px) {
+    gap: 36px;
   }
 `;
 
@@ -175,6 +186,7 @@ export const BanerText = styled.p`
   line-height: 1;
   text-align: left;
   text-transform: uppercase;
+  white-space: nowrap;
 
   @media screen and (min-width: 1280px) {
     font-size: 64px;
