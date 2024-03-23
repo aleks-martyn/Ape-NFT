@@ -14,6 +14,7 @@ import {
   InnerWrap,
   LinkList,
   MenuLinkList,
+  MenuListItem,
   MenuLink,
   LinkName,
   StyledNav,
@@ -21,6 +22,7 @@ import {
 } from './ModalMenu.styled';
 
 const modalRoot = document.getElementById('modal-root');
+const sectionNames = ['about', 'm-map', 'faq', 'arts', 'mint'];
 
 export const ModalMenu = ({ onClose }) => {
   useEffect(() => {
@@ -87,35 +89,13 @@ export const ModalMenu = ({ onClose }) => {
 
       <StyledNav>
         <MenuLinkList>
-          <li>
-            <MenuLink href="#about" onClick={() => onClose()}>
-              <LinkName>ABOUT</LinkName>
-            </MenuLink>
-          </li>
-
-          <li>
-            <MenuLink href="#m-map" onClick={() => onClose()}>
-              <LinkName>M-MAP</LinkName>
-            </MenuLink>
-          </li>
-
-          <li>
-            <MenuLink href="#faq" onClick={() => onClose()}>
-              <LinkName>FAQ</LinkName>
-            </MenuLink>
-          </li>
-
-          <li>
-            <MenuLink href="#arts" onClick={() => onClose()}>
-              <LinkName>ARTS</LinkName>
-            </MenuLink>
-          </li>
-
-          <li>
-            <MenuLink href="#mint" onClick={() => onClose()}>
-              <LinkName>MINT</LinkName>
-            </MenuLink>
-          </li>
+          {sectionNames.map((name, index) => (
+            <MenuListItem key={index}>
+              <MenuLink href={'#' + name} onClick={() => onClose()}>
+                <LinkName>{name}</LinkName>
+              </MenuLink>
+            </MenuListItem>
+          ))}
         </MenuLinkList>
       </StyledNav>
 

@@ -13,6 +13,10 @@ export const ModalWin = styled.div`
     background-color: transparent;
     padding-top: 66px;
   }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 40px;
+  }
 `;
 
 export const Wrap = styled.div`
@@ -25,6 +29,12 @@ export const Wrap = styled.div`
 
   @media screen and (min-width: 768px) {
     width: 710px;
+    margin-bottom: 0;
+    justify-content: flex-end;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 1214px;
     margin-bottom: 0;
     justify-content: flex-end;
   }
@@ -100,6 +110,8 @@ export const CloseBtn = styled.button`
   }
 
   @media screen and (min-width: 768px) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     background-color: var(--btn-color);
 
     &:hover span {
@@ -110,7 +122,8 @@ export const CloseBtn = styled.button`
   @media screen and (min-width: 1280px) {
     width: 80px;
     height: 80px;
-    border-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
   }
 `;
 
@@ -143,8 +156,46 @@ export const MenuLinkList = styled.ul`
   align-items: center;
 
   @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 66px;
+    left: 77px;
+    width: 614px;
     flex-direction: row;
-    gap: 10px
+    justify-content: flex-end;
+    gap: 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: 40px;
+  }
+`;
+
+export const MenuListItem = styled.li`
+  @media screen and (min-width: 768px) {
+    display: flex;
+    height: 48px;
+    width: 48px;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      background-color: var(--btn-color);
+
+      &:first-of-type {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 80px;
+      height: 80px;
+
+      &:first-of-type {
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+      }
+    }
   }
 `;
 
@@ -175,6 +226,11 @@ export const LinkName = styled.span`
   @media screen and (min-width: 768px) {
     font-size: 12px;
     line-height: 1.17;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.19;
   }
 `;
 
