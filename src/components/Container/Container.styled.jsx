@@ -14,9 +14,13 @@ export const StyledContainer = styled.div`
 
   @media screen and (min-width: 768px) {
     max-width: 768px;
+    padding-left: 88px;
+    padding-right: 88px;
   }
 
   @media screen and (min-width: 1280px) {
     max-width: 1280px;
+    padding-left: 124px;
+    padding-right: 124px;
   }
 `;
