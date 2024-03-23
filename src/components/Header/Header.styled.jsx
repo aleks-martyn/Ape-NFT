@@ -5,8 +5,15 @@ export const StyledHeader = styled.header`
   top: 0;
   left: 0;
   right: 0;
-  padding-top: 70px;
-  z-index: 999;
+  padding-top: 62px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 66px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 40px;
+  }
 `;
 
 export const StyledContainer = styled.div`
@@ -28,8 +35,8 @@ export const StyledContainer = styled.div`
 
   @media screen and (min-width: 1280px) {
     max-width: 1280px;
-    padding-left: 112px;
-    padding-right: 112px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 `;
 
@@ -41,13 +48,21 @@ export const Wrap = styled.div`
 export const InnerWrap = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
+
+  @media screen and (min-width: 1280px) {
+    gap: 15px;
+  }
 `;
 
 export const LinkList = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
+
+  @media screen and (min-width: 1280px) {
+    gap: 15px;
+  }
 `;
 
 export const LogoLink = styled.a`
@@ -55,6 +70,7 @@ export const LogoLink = styled.a`
   width: 48px;
   height: 32px;
   padding: 0;
+  padding-top: 8px;
   border: none;
   align-items: center;
   justify-content: center;
@@ -64,13 +80,25 @@ export const LogoLink = styled.a`
   &:hover {
     color: var(--primary-text-color);
   }
+
+  @media screen and (min-width: 1280px) {
+    width: 72px;
+    height: 50px;
+    padding-top: 15px;
+  }
 `;
 
-export const MenuTitle = styled.span`
+export const BtnLabel = styled.span`
+  font-family: 'Messina Sans Mono';
   font-weight: 600;
   font-size: 12px;
   line-height: 1.17;
   transition: color var(--tra), text-decoration var(--tra);
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.19;
+  }
 `;
 
 export const SocialLink = styled.a`
@@ -89,7 +117,15 @@ export const SocialLink = styled.a`
   &:hover {
     color: var(--primary-text-color);
   }
+
+  @media screen and (min-width: 1280px) {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+  }
 `;
+
+const getVisibility = isShowModal => (isShowModal ? 'hidden' : 'visible');
 
 export const MenuBtn = styled.button`
   width: 48px;
@@ -101,5 +137,15 @@ export const MenuBtn = styled.button`
   &:hover span {
     color: var(--primary-text-color);
     text-decoration: underline;
+  }
+
+  @media screen and (min-width: 768px) {
+    visibility: ${({ isShowModal }) => getVisibility(isShowModal)};
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
   }
 `;

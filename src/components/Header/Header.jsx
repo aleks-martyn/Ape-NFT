@@ -1,10 +1,12 @@
+import { useState } from 'react';
+import { ModalMenu } from 'components/ModalMenu';
 import {
   StyledHeader,
   StyledContainer,
   Wrap,
   InnerWrap,
   LinkList,
-  MenuTitle,
+  BtnLabel,
   LogoLink,
   SocialLink,
   MenuBtn,
@@ -15,20 +17,24 @@ import { LogomarkIcon } from 'components/LogomarkIcon';
 import { DiscordIcon } from 'components/DiscordIcon';
 
 export const Header = () => {
+  const [isShowModal, setIsShowModal] = useState(false);
+
   return (
     <StyledHeader>
       <StyledContainer>
         <Wrap>
           <LogoLink href="../../index.js">
-            <LogoIcon width="48" height="32" />
+            <LogoIcon />
           </LogoLink>
 
           <InnerWrap>
-            <nav>
-              <MenuBtn type="button">
-                <MenuTitle>MENU</MenuTitle>
-              </MenuBtn>
-            </nav>
+            <MenuBtn
+              type="button"
+              isShowModal={isShowModal}
+              onClick={() => setIsShowModal(true)}
+            >
+              <BtnLabel>MENU</BtnLabel>
+            </MenuBtn>
 
             <LinkList>
               <li>
@@ -37,7 +43,7 @@ export const Header = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <DiscordIcon width="16" height="16" />
+                  <DiscordIcon />
                 </SocialLink>
               </li>
 
@@ -47,7 +53,7 @@ export const Header = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <LogomarkIcon width="16" height="16" />
+                  <LogomarkIcon />
                 </SocialLink>
               </li>
 
@@ -57,13 +63,15 @@ export const Header = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <TwitterIcon width="16" height="16" />
+                  <TwitterIcon />
                 </SocialLink>
               </li>
             </LinkList>
           </InnerWrap>
         </Wrap>
       </StyledContainer>
+
+      {isShowModal && <ModalMenu onClose={() => setIsShowModal(false)} />}
     </StyledHeader>
   );
 };
