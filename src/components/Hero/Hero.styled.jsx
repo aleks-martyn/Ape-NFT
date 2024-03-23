@@ -106,24 +106,18 @@ export const Text = styled.p`
 `;
 
 export const Image = styled.img`
-  width: 216px;
-  height: 284px;
   margin-top: 4px;
   margin-left: auto;
   margin-right: auto;
 
   @media screen and (min-width: 768px) {
-    width: 283px;
-    height: 373px;
     margin-top: 0;
     position: absolute;
     bottom: -123px;
-    left: 210px;
+    left: 207px;
   }
 
   @media screen and (min-width: 1280px) {
-    width: 463px;
-    height: 612px;
     bottom: -200px;
     left: 380px;
   }
@@ -149,11 +143,11 @@ export const InnerWrap = styled.div`
   }
 `;
 
-export const Button = styled.button`
-  width: 216px;
+export const Link = styled.a`
   padding: 10px 70px 12px;
   border-radius: 8px;
   border: none;
+  text-decoration: none;
   background-color: var(--btn-color);
 
   &:hover span {
@@ -161,18 +155,16 @@ export const Button = styled.button`
   }
 
   @media screen and (min-width: 768px) {
-    width: 190px;
     padding: 10px 61px 12px;
     border-radius: 12px;
   }
 
   @media screen and (min-width: 1280px) {
-    width: 337px;
-    padding: 16px 100px 20px;
+    padding: 16px 110px 20px;
   }
 `;
 
-export const BtnLabel = styled.span`
+export const LinkLabel = styled.span`
   color: var(--secondary-text-color);
   font-family: 'Right Grotesk';
   font-weight: 900;
