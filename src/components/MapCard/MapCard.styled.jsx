@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
+import NorthEastIcon from '@mui/icons-material/NorthEast';
 
 const getBgColor = title =>
-  title === 'Learn more in mind map'
+  title.includes('Learn')
     ? 'var(--accent-color)'
     : 'var(--secondary-text-color)';
 
@@ -13,7 +14,7 @@ export const Wrap = styled.div`
   height: 242px;
   padding: 24px 12px;
   border-radius: 12px;
-  background-color: ${({title}) => getBgColor(title)};
+  background-color: ${({ title }) => getBgColor(title)};
 
   @media screen and (min-width: 768px) {
     width: 284px;
@@ -29,6 +30,26 @@ export const Wrap = styled.div`
   }
 `;
 
+export const CardText = styled.p`
+  width: 192px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  text-align: left;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    width: 128px;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 228px;
+    font-size: 24px;
+    line-height: 1.21;
+  }
+`;
+
 export const CardTitle = styled.h3`
   font-family: 'Right Grotesk';
   font-size: 32px;
@@ -40,4 +61,15 @@ export const CardTitle = styled.h3`
   @media screen and (min-width: 1280px) {
     font-size: 64px;
   }
+`;
+
+export const ArrowIcon = styled(NorthEastIcon)`
+  margin-left: auto;
+  width: 48px;
+  height: 48px;
+  fill: var(--primary-text-color);
+
+  @media screen and (min-width: 1280px) {
+    width: 64px;
+    height: 64px;
 `;

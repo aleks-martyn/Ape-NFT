@@ -1,9 +1,9 @@
-import { Wrap, CardTitle } from './MapCard.styled';
+import { Wrap, CardText, CardTitle, ArrowIcon } from './MapCard.styled';
 
-export const MapCard = ({ title, children }) => {
+export const MapCard = ({ title, text, index }) => {
   return (
     <Wrap title={title}>
-      {children}
+      {index !== 3 ? <CardText>{text}</CardText> : <ArrowIcon />}
       <CardTitle>{title}</CardTitle>
     </Wrap>
   );
