@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import CloseSharpIcon from '@mui/icons-material/CloseSharp';
 
 export const StyledSection = styled.section`
   padding-top: 60px;
@@ -9,6 +10,18 @@ export const StyledSection = styled.section`
 
   @media screen and (min-width: 1280px) {
     padding-top: 120px;
+  }
+`;
+
+export const Wrapper = styled.div`
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 269px 313px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: grid;
+    grid-template-columns: 538px 492px;
   }
 `;
 
@@ -27,6 +40,8 @@ export const SectionTitle = styled.h2`
   @media screen and (min-width: 768px) {
     font-size: 60px;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
     width: 269px;
   }
 
@@ -49,12 +64,14 @@ export const FirstTextWrap = styled.div`
   @media screen and (min-width: 768px) {
     width: 275px;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   @media screen and (min-width: 1280px) {
     width: 409px;
   }
-`
+`;
 
 export const FirstText = styled.p`
   font-weight: 400;
@@ -91,6 +108,10 @@ export const LastString = styled.p`
 `;
 
 export const SecondTextWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
@@ -99,9 +120,11 @@ export const SecondTextWrap = styled.div`
   @media screen and (min-width: 768px) {
     width: 269px;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1280px) {
     width: 417px;
   }
 `;
@@ -117,26 +140,19 @@ export const SecondText = styled.p`
     line-height: 1.19;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1280px) {
     font-size: 24px;
     line-height: 1.21;
   }
 `;
 
 export const Image = styled.img`
-  width: 216px;
-  height: 284px;
   margin-left: auto;
   margin-right: auto;
 
   @media screen and (min-width: 768px) {
-    width: 283px;
-    height: 373px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 463px;
-    height: 612px;
+    margin-left: 0;
+    margin-right: 0;
   }
 `;
 
@@ -163,4 +179,10 @@ export const BanerText = styled.p`
   @media screen and (min-width: 1280px) {
     font-size: 64px;
   }
+`;
+
+export const CrossIcon = styled(CloseSharpIcon)`
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
+  fill: var(--primary-text-color);
 `;
