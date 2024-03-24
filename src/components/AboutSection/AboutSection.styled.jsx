@@ -15,12 +15,15 @@ export const StyledSection = styled.section`
 
 export const Wrapper = styled.div`
   @media screen and (min-width: 768px) {
+    position: relative;
     display: grid;
+    grid-column-gap: 10px;
     grid-template-columns: 269px 313px;
   }
 
   @media screen and (min-width: 1280px) {
     display: grid;
+    grid-column-gap: 0;
     grid-template-columns: 538px 492px;
   }
 `;
@@ -39,7 +42,7 @@ export const SectionTitle = styled.h2`
 
   @media screen and (min-width: 768px) {
     font-size: 60px;
-    margin-bottom: 0;
+    margin-bottom: 68px;
     margin-left: 0;
     margin-right: 0;
     width: 269px;
@@ -48,6 +51,7 @@ export const SectionTitle = styled.h2`
   @media screen and (min-width: 1280px) {
     font-size: 120px;
     width: 538px;
+    margin-bottom: 56px;
   }
 `;
 
@@ -63,6 +67,7 @@ export const FirstTextWrap = styled.div`
 
   @media screen and (min-width: 768px) {
     width: 275px;
+    margin-top: 10px;
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
@@ -70,6 +75,7 @@ export const FirstTextWrap = styled.div`
 
   @media screen and (min-width: 1280px) {
     width: 409px;
+    margin-top: 22px;
   }
 `;
 
@@ -119,13 +125,16 @@ export const SecondTextWrap = styled.div`
 
   @media screen and (min-width: 768px) {
     width: 269px;
-    margin-bottom: 0;
+    gap: 24px;
+    margin-bottom: 36px;
     margin-left: 0;
     margin-right: 0;
   }
 
   @media screen and (min-width: 1280px) {
     width: 417px;
+    gap: 36px;
+    margin-bottom: 40px;
   }
 `;
 
@@ -151,6 +160,9 @@ export const Image = styled.img`
   margin-right: auto;
 
   @media screen and (min-width: 768px) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
     margin-left: 0;
     margin-right: 0;
   }
