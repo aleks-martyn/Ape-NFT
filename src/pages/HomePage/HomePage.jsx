@@ -6,6 +6,7 @@ import { Section } from 'components/Section';
 import { Footer } from 'components/Footer';
 import { MindMap } from 'components/MindMap';
 import { Slider } from 'components/Slider';
+import { Mint } from 'components/Mint';
 
 export default function HomePage() {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
@@ -29,7 +30,9 @@ export default function HomePage() {
 
         <Section id="arts" title="COLLECTION" />
 
-        <Section id="mint" title="Are you in?" />
+        <Section id="mint" title="Are you in?">
+          <Mint />
+        </Section>
       </main>
 
       <Footer />
