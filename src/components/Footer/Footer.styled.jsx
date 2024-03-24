@@ -1,10 +1,16 @@
 import styled from '@emotion/styled';
 
 export const StyledFooter = styled.footer`
+  padding-top: 60px;
   padding-bottom: 24px;
 
   @media screen and (min-width: 768px) {
+    padding-top: 80px;
     padding-bottom: 40px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 120px;
   }
 `;
 
