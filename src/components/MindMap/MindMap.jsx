@@ -1,11 +1,10 @@
 import { MapCard } from 'components/MapCard';
-import { cards } from 'cards';
 import { Wrap } from './MindMap.styled';
 
-export const MindMap = () => {
+export const MindMap = ({items, slide}) => {
   return (
-    <Wrap>
-      {cards.map(({ title, text }, index) => (
+    <Wrap style={{ transform: `translateX(-${slide * 100}%)` }}>
+      {items.map(({ title, text }, index) => (
         <MapCard key={index} index={index} title={title} text={text} />
       ))}
     </Wrap>

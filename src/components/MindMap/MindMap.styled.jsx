@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 
-export const Wrap = styled.div`
+export const Wrap = styled.ul`
+  display: flex;
+
   @media screen and (min-width: 768px) {
     display: grid;
     grid-gap: 24px;
