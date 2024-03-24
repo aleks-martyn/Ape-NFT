@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Ape-NFT/static/css/main.728ec72d.css",
-    "main.js": "/Ape-NFT/static/js/main.300d3619.js",
+    "main.js": "/Ape-NFT/static/js/main.c036c0fe.js",
     "static/media/BiroScriptPlus.ttf": "/Ape-NFT/static/media/BiroScriptPlus.8f40d0e26da891712200.ttf",
     "static/media/about-desk.png": "/Ape-NFT/static/media/about-desk.19b6ea4c5011b37e36ab.png",
     "static/media/hero-desk.png": "/Ape-NFT/static/media/hero-desk.6ff8b4be1f9d7d85c9ca.png",
@@ -11,12 +11,18 @@
     "static/media/about-mob.png": "/Ape-NFT/static/media/about-mob.d698cfd98b950d936c9d.png",
     "static/media/RightGrotesk-CompactBlack.otf": "/Ape-NFT/static/media/RightGrotesk-CompactBlack.965367bf710f347153cc.otf",
     "static/media/MessinaSansMono-Regular.ttf": "/Ape-NFT/static/media/MessinaSansMono-Regular.b289391c577f8fd447dd.ttf",
+    "static/media/collection-card3.jpg": "/Ape-NFT/static/media/collection-card3.58dd8209ea4635f5f3c7.jpg",
+    "static/media/collection-card2.jpg": "/Ape-NFT/static/media/collection-card2.992ac4b301b22cb53e3f.jpg",
+    "static/media/collection-card7.jpg": "/Ape-NFT/static/media/collection-card7.4efb9e582076c4b31e9b.jpg",
+    "static/media/collection-card6.jpg": "/Ape-NFT/static/media/collection-card6.7807fbb0fdf6f31d9605.jpg",
+    "static/media/collection-card1.jpg": "/Ape-NFT/static/media/collection-card1.4b944f73d28015fb1430.jpg",
+    "static/media/collection-card8.jpg": "/Ape-NFT/static/media/collection-card8.4587683c56a505733b63.jpg",
     "index.html": "/Ape-NFT/index.html",
     "main.728ec72d.css.map": "/Ape-NFT/static/css/main.728ec72d.css.map",
-    "main.300d3619.js.map": "/Ape-NFT/static/js/main.300d3619.js.map"
+    "main.c036c0fe.js.map": "/Ape-NFT/static/js/main.c036c0fe.js.map"
   },
   "entrypoints": [
     "static/css/main.728ec72d.css",
-    "static/js/main.300d3619.js"
+    "static/js/main.c036c0fe.js"
   ]
 }
