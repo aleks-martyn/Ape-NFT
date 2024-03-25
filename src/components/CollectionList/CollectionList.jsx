@@ -3,7 +3,7 @@ import { Wrap } from './CollectionList.styled';
 
 export const CollectionList = ({ items, slide }) => {
   return (
-    <Wrap style={{ transform: `translateX(-${slide * 100}%)` }}>
+    <Wrap slide={slide}>
       {items.map(({ src, alt }, index) => (
         <CollectionCard key={index} src={src} alt={alt} />
       ))}
