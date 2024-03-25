@@ -73,7 +73,8 @@ ul {
   list-style: none;
 }
 
-li {
+li,
+input {
   box-sizing: border-box;
 }
 

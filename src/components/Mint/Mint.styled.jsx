@@ -46,7 +46,7 @@ export const Text = styled.p`
 export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 16px;
   width: 216px;
 
   @media screen and (min-width: 768px) {
@@ -55,8 +55,17 @@ export const StyledForm = styled.form`
 
   @media screen and (min-width: 1280px) {
     width: 397px;
-    gap: 8px;
+    gap: 16px;
   }
+`;
+
+export const StyledInput = styled.input`
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--secondary-text-color);
+  outline: 1px solid var(--accent-color);
 `;
 
 export const SubmitBtn = styled.button`

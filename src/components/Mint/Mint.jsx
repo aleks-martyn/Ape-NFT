@@ -1,4 +1,4 @@
-import { Wrap, CrossIcon, Text, StyledForm, SubmitBtn } from './Mint.styled';
+import { Wrap, CrossIcon, Text, StyledForm, StyledInput, SubmitBtn } from './Mint.styled';
 
 export const Mint = () => {
   return (
@@ -10,10 +10,14 @@ export const Mint = () => {
         limited edition NFT
       </Text>
 
-      <StyledForm>
-        <input></input>
+      <StyledForm name="join-form">
+        <label>
+          <StyledInput type="text" />
+        </label>
 
-        <input></input>
+        <label>
+          <StyledInput type="password" />
+        </label>
 
         <SubmitBtn type="submit">MINT</SubmitBtn>
       </StyledForm>
