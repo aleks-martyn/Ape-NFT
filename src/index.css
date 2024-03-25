@@ -73,6 +73,10 @@ ul {
   list-style: none;
 }
 
+li {
+  box-sizing: border-box;
+}
+
 button {
   cursor: pointer;
 }
