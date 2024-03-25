@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { CollectionList } from 'components/CollectionList';
 import { ControlButtons } from 'components/ControlButtons';
 import { SliderWrap } from './CollectionSlider.styled';
@@ -8,6 +9,11 @@ export const CollectionSlider = ({ items }) => {
   const [slide, setSlide] = useState(0);
   const [touchPosition, setTouchPosition] = useState(null);
 
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+  const isMinTablet = useMediaQuery({ query: '(min-width: 768px)' });
+  const isMaxTablet = useMediaQuery({ query: '(max-width: 1279px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
+
   useEffect(() => {
     setElements(items);
   }, [items]);
@@ -15,10 +21,24 @@ export const CollectionSlider = ({ items }) => {
   const changeSlide = (direction = 1) => {
     let slideNumber = 0;
 
+    const getElementsAmount = () => {
+      if (isMobile) {
+        return elements.length;
+      }
+      if (isMinTablet && isMaxTablet) {
+        return elements.length / 2;
+      }
+      if (isDesktop) {
+        return elements.length / 4;
+      }
+    };
+
+    const elementsAmount = getElementsAmount();
+
     if (slide + direction < 0) {
-      slideNumber = elements.length - 1;
+      slideNumber = elementsAmount - 1;
     } else {
-      slideNumber = (slide + direction) % elements.length;
+      slideNumber = (slide + direction) % elementsAmount;
     }
 
     setSlide(slideNumber);
