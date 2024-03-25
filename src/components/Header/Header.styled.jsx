@@ -59,6 +59,7 @@ export const LinkList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 8px;
+  z-index: 1;
 
   @media screen and (min-width: 1280px) {
     gap: 15px;
