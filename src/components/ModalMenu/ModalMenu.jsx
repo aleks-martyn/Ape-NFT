@@ -6,6 +6,7 @@ import { LogomarkIcon } from 'components/LogomarkIcon';
 import { DiscordIcon } from 'components/DiscordIcon';
 import {
   ModalWin,
+  StyledContainer,
   Wrap,
   LogoLink,
   BtnLabel,
@@ -43,63 +44,65 @@ export const ModalMenu = ({ onClose }) => {
 
   return createPortal(
     <ModalWin>
-      <Wrap>
-        <LogoLink href="../../index.js">
-          <LogoIcon />
-        </LogoLink>
+      <StyledContainer>
+        <Wrap>
+          <LogoLink href="../../index.js">
+            <LogoIcon />
+          </LogoLink>
 
-        <InnerWrap>
-          <CloseBtn type="button" onClick={() => onClose()}>
-            <BtnLabel>CLOSE</BtnLabel>
-          </CloseBtn>
+          <InnerWrap>
+            <CloseBtn type="button" onClick={() => onClose()}>
+              <BtnLabel>CLOSE</BtnLabel>
+            </CloseBtn>
 
-          <LinkList>
-            <li>
-              <SocialLink
-                href="https://discord.com"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <DiscordIcon />
-              </SocialLink>
-            </li>
+            <LinkList>
+              <li>
+                <SocialLink
+                  href="https://discord.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <DiscordIcon />
+                </SocialLink>
+              </li>
 
-            <li>
-              <SocialLink
-                href="https://logomark.com"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <LogomarkIcon />
-              </SocialLink>
-            </li>
+              <li>
+                <SocialLink
+                  href="https://logomark.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <LogomarkIcon />
+                </SocialLink>
+              </li>
 
-            <li>
-              <SocialLink
-                href="https://www.twitter.com"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <TwitterIcon />
-              </SocialLink>
-            </li>
-          </LinkList>
-        </InnerWrap>
-      </Wrap>
+              <li>
+                <SocialLink
+                  href="https://www.twitter.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <TwitterIcon />
+                </SocialLink>
+              </li>
+            </LinkList>
+          </InnerWrap>
+        </Wrap>
 
-      <StyledNav>
-        <MenuLinkList>
-          {sectionNames.map((name, index) => (
-            <MenuListItem key={index}>
-              <MenuLink href={'#' + name} onClick={() => onClose()}>
-                <LinkName>{name}</LinkName>
-              </MenuLink>
-            </MenuListItem>
-          ))}
-        </MenuLinkList>
-      </StyledNav>
+        <StyledNav>
+          <MenuLinkList>
+            {sectionNames.map((name, index) => (
+              <MenuListItem key={index}>
+                <MenuLink href={'#' + name} onClick={() => onClose()}>
+                  <LinkName>{name}</LinkName>
+                </MenuLink>
+              </MenuListItem>
+            ))}
+          </MenuLinkList>
+        </StyledNav>
 
-      <LowerText>© Yacht ape 2024 all rights reserved</LowerText>
+        <LowerText>© Yacht ape 2024 all rights reserved</LowerText>
+      </StyledContainer>
     </ModalWin>,
     modalRoot
   );

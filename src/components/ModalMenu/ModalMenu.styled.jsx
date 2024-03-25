@@ -20,16 +20,38 @@ export const ModalWin = styled.div`
   }
 `;
 
-export const Wrap = styled.div`
-  display: flex;
-  width: 328px;
+export const StyledContainer = styled.div`
+  position: relative;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1280px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+`;
+
+export const Wrap = styled.div`
+  display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
 
   @media screen and (min-width: 768px) {
-    width: 710px;
+    width: 712px;
     margin-bottom: 0;
     justify-content: flex-end;
   }
@@ -157,9 +179,6 @@ export const MenuLinkList = styled.ul`
   align-items: center;
 
   @media screen and (min-width: 768px) {
-    position: absolute;
-    top: 66px;
-    left: 77px;
     width: 614px;
     flex-direction: row;
     justify-content: flex-end;
@@ -167,7 +186,7 @@ export const MenuLinkList = styled.ul`
   }
 
   @media screen and (min-width: 1280px) {
-    top: 40px;
+    width: 1062px;
   }
 `;
 
@@ -242,7 +261,14 @@ export const StyledNav = styled.nav`
   margin-bottom: 240px;
 
   @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 0px;
+    left: 78px;
     margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    left: 104px;
   }
 `;
 
