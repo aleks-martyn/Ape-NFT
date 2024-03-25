@@ -9,7 +9,7 @@ import {
   Text,
   Image,
   InnerWrap,
-  Link,
+  StyledLink,
   LinkLabel,
   Paragraph,
 } from './Hero.styled';
@@ -37,9 +37,9 @@ export const Hero = () => {
         {isDesktop && <Image src={BigImg} alt="Hero Ape" />}
 
         <InnerWrap>
-          <Link href='#mint'>
+          <StyledLink to="mint" smooth={true} duration={500}>
             <LinkLabel>MEET APES</LinkLabel>
-          </Link>
+          </StyledLink>
 
           <Paragraph>
             Yacht Ape is a collection of unique digital apes that you can own in

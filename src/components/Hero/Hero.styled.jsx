@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Link } from 'react-scroll';
 
 export const StyledSection = styled.section`
   margin-top: 54px;
@@ -143,7 +144,7 @@ export const InnerWrap = styled.div`
   }
 `;
 
-export const Link = styled.a`
+export const StyledLink = styled(Link)`
   padding: 10px 70px 12px;
   border-radius: 8px;
   border: none;
