@@ -8,6 +8,7 @@ export const ModalWin = styled.div`
   height: 100vh;
   padding: 62px 0 20px;
   background-color: var(--background-color);
+  z-index: 2;
 
   @media screen and (min-width: 768px) {
     background-color: transparent;
@@ -202,9 +203,11 @@ export const MenuListItem = styled.li`
 export const MenuLink = styled.a`
   text-decoration: none;
   color: var(--primary-text-color);
+  transition: color var(--tra), text-decoration(--tra);
 
   &:hover span {
     color: var(--accent-color);
+    text-decoration: underline;
   }
 
   @media screen and (min-width: 768px) {
@@ -212,6 +215,7 @@ export const MenuLink = styled.a`
 
     &:hover span {
       color: var(--primary-text-color);
+      text-decoration: underline;
     }
   }
 `;
