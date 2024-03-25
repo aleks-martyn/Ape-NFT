@@ -6,7 +6,7 @@ const getBgColor = title =>
     ? 'var(--accent-color)'
     : 'var(--secondary-text-color)';
 
-export const Wrap = styled.div`
+export const Wrap = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -102,6 +102,8 @@ export const StyledLink = styled.a`
 `;
 
 export const Linklabel = styled.span`
+  display: block;
+  width: 192px;
   font-family: 'Right Grotesk';
   font-size: 32px;
   font-weight: 900;
