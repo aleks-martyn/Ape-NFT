@@ -7,17 +7,17 @@ import {
   QuestionText,
 } from './QuestionItem.styled';
 
-export const QuestionItem = ({ title, text, index }) => {
+export const QuestionItem = ({ title, text, src, alt, index }) => {
   return (
-    <QuestionWrap>
-      <ImageThumb>
-        <Image src="" alt="" />
+    <QuestionWrap index={index}>
+      <ImageThumb index={index}>
+        <Image src={src} alt={alt} />
       </ImageThumb>
 
       <TextWrap>
         <QuestionTitle index={index}>{title}</QuestionTitle>
 
-        <QuestionText>{text}</QuestionText>
+        <QuestionText index={index}>{text}</QuestionText>
       </TextWrap>
     </QuestionWrap>
   );
