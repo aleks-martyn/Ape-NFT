@@ -7,17 +7,33 @@ import {
   QuestionText,
 } from './QuestionItem.styled';
 
-export const QuestionItem = ({ title, text, src, alt, index }) => {
+export const QuestionItem = ({
+  title,
+  text,
+  src,
+  alt,
+  index,
+  currentIndex,
+  onClick,
+}) => {
   return (
-    <QuestionWrap index={index}>
-      <ImageThumb index={index}>
+    <QuestionWrap
+      index={index}
+      currentIndex={currentIndex}
+      onClick={() => onClick()}
+    >
+      <ImageThumb index={index} currentIndex={currentIndex}>
         <Image src={src} alt={alt} />
       </ImageThumb>
 
       <TextWrap>
-        <QuestionTitle index={index}>{title}</QuestionTitle>
+        <QuestionTitle index={index} currentIndex={currentIndex}>
+          {title}
+        </QuestionTitle>
 
-        <QuestionText index={index}>{text}</QuestionText>
+        <QuestionText index={index} currentIndex={currentIndex}>
+          {text}
+        </QuestionText>
       </TextWrap>
     </QuestionWrap>
   );
