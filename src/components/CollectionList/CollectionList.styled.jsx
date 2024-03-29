@@ -8,11 +8,11 @@ export const Wrap = styled.ul`
 
   @media screen and (min-width: 768px) {
     gap: 24px;
-    transform: translateX(-${({ slide }) => getTranslate(slide, 104.23)}%);
+    transform: translateX(-${({ slide }) => getTranslate(slide, 52)}%);
   }
 
   @media screen and (min-width: 1280px) {
     gap: 24px;
-    transform: translateX(-${({ slide }) => getTranslate(slide, 102.33)}%);
+    transform: translateX(-${({ slide }) => getTranslate(slide, 25.58)}%);
   }
 `;

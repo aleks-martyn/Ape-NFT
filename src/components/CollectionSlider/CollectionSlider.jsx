@@ -26,17 +26,19 @@ export const CollectionSlider = ({ items }) => {
         return elements.length;
       }
       if (isMinTablet && isMaxTablet) {
-        return elements.length / 2;
+        return elements.length - 1;
       }
       if (isDesktop) {
-        return elements.length / 4;
+        return elements.length - 3;
       }
     };
 
     const elementsAmount = getElementsAmount();
 
     if (slide + direction < 0) {
-      slideNumber = elementsAmount - 1;
+      return;
+    } else if (slide + direction === elementsAmount) {
+      return;
     } else {
       slideNumber = (slide + direction) % elementsAmount;
     }
