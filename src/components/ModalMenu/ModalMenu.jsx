@@ -93,7 +93,12 @@ export const ModalMenu = ({ onClose }) => {
           <MenuLinkList>
             {sectionNames.map((name, index) => (
               <MenuListItem key={index}>
-                <MenuLink to={name} smooth={true} duration={500} onClick={() => onClose()}>
+                <MenuLink
+                  to={name}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => onClose()}
+                >
                   <LinkName>{name}</LinkName>
                 </MenuLink>
               </MenuListItem>
