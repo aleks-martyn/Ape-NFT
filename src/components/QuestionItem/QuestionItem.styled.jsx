@@ -14,6 +14,7 @@ export const QuestionWrap = styled.li`
   border-radius: 12px;
   background-color: ${({ index, currentIndex }) =>
     getWrapBgColor(index, currentIndex)};
+  transition: background-color var(--tra);
 
   &:hover h3 {
     color: var(--accent-color);
@@ -79,6 +80,7 @@ export const ImageThumb = styled.div`
     rotate: -16deg;
     overflow: hidden;
     border-radius: 16px;
+    transition: display var(--tra);
   }
 
   @media screen and (min-width: 1280px) {
@@ -146,6 +148,7 @@ export const QuestionText = styled.p`
   font-weight: 400;
   line-height: 1.17;
   text-transform: uppercase;
+  transition: display var(--tra);
 
   @media screen and (min-width: 1280px) {
     font-size: 16px;
