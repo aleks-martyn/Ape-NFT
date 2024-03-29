@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll';
 import styled from '@emotion/styled';
 
 export const ModalWin = styled.div`
@@ -219,7 +220,7 @@ export const MenuListItem = styled.li`
   }
 `;
 
-export const MenuLink = styled.a`
+export const MenuLink = styled(Link)`
   text-decoration: none;
   color: var(--primary-text-color);
   transition: color var(--tra), text-decoration(--tra);

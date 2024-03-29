@@ -35,10 +35,10 @@ export const AboutSection = () => {
   const crossDimension = getCrossDimension(isDesktop);
 
   return (
-    <StyledSection>
+    <StyledSection id="about">
       <Container>
         <Wrapper>
-          <SectionTitle id="about">
+          <SectionTitle>
             a Story that started with{' '}
             <Span>
               one simple

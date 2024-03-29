@@ -2,9 +2,9 @@ import { Container } from 'components/Container';
 import { StyledSection, SectionTitle } from './Section.styled';
 
 export const Section = ({ id, title, children }) => (
-  <StyledSection>
+  <StyledSection id={id}>
     <Container>
-      <SectionTitle id={id}>{title}</SectionTitle>
+      <SectionTitle>{title}</SectionTitle>
       {children}
     </Container>
   </StyledSection>
