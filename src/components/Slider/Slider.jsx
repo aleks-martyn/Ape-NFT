@@ -3,7 +3,7 @@ import { MindMap } from 'components/MindMap';
 import { ControlButtons } from 'components/ControlButtons';
 import { SliderWrap } from './Slider.styled';
 
-export const Slider = ({items}) => {
+export const Slider = ({ items }) => {
   const [elements, setElements] = useState([]);
   const [slide, setSlide] = useState(0);
   const [touchPosition, setTouchPosition] = useState(null);
@@ -16,7 +16,9 @@ export const Slider = ({items}) => {
     let slideNumber = 0;
 
     if (slide + direction < 0) {
-      slideNumber = elements.length - 1;
+      return;
+    } else if (slide + direction === elements.length) {
+      return;
     } else {
       slideNumber = (slide + direction) % elements.length;
     }
