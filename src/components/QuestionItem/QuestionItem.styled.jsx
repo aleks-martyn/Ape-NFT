@@ -15,6 +15,14 @@ export const QuestionWrap = styled.li`
   background-color: ${({ index, currentIndex }) =>
     getWrapBgColor(index, currentIndex)};
 
+  &:hover h3 {
+    color: var(--accent-color);
+  }
+
+  &:hover:before {
+    color: var(--primary-text-color);
+  }
+
   &::before {
     display: inline-block;
     margin-right: 8px;
@@ -25,15 +33,18 @@ export const QuestionWrap = styled.li`
     font-weight: 400;
     line-height: 1.67;
     text-wrap: nowrap;
+    transition: color var(--tra);
 
     @media screen and (min-width: 768px) {
       margin-right: 24px;
+      padding-top: 2px;
       font-size: 16px;
       line-height: 1.69;
     }
 
     @media screen and (min-width: 1280px) {
       margin-right: 27px;
+      padding-top: 4px;
       font-size: 24px;
       line-height: 1.67;
     }
@@ -46,8 +57,8 @@ export const QuestionWrap = styled.li`
   }
 
   @media screen and (min-width: 1280px) {
-    width: 1034px;
-    padding: 18px 18px 23px 297px;
+    width: 1032px;
+    padding: 24px 24px 24px 297px;
     border-radius: 24px;
   }
 `;
@@ -60,9 +71,11 @@ export const ImageThumb = styled.div`
 
   @media screen and (min-width: 768px) {
     position: absolute;
+    top: 0;
     left: 0;
     display: ${({ index, currentIndex }) =>
       getImgThumbDisplay(index, currentIndex)};
+    transform-origin: 40px 14px;
     rotate: -16deg;
     overflow: hidden;
     border-radius: 16px;
@@ -83,8 +96,8 @@ export const Image = styled.img`
 
   @media screen and (min-width: 1280px) {
     width: 248px;
-    object-fit: cover;
-    object-position: bottom;
+    position: absolute;
+    top: -12px;
   }
 `;
 
@@ -113,6 +126,7 @@ export const QuestionTitle = styled.h3`
   line-height: 1;
   text-transform: uppercase;
   text-align: start;
+  transition: color var(--tra);
 
   @media screen and (min-width: 768px) {
     font-size: 32px;
