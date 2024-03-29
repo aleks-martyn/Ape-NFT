@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Ape-NFT/static/css/main.b92736dc.css",
-    "main.js": "/Ape-NFT/static/js/main.23d9bcd6.js",
+    "main.js": "/Ape-NFT/static/js/main.4dd48e92.js",
     "static/media/BiroScriptPlus.ttf": "/Ape-NFT/static/media/BiroScriptPlus.8f40d0e26da891712200.ttf",
     "static/media/about-desk.png": "/Ape-NFT/static/media/about-desk.19b6ea4c5011b37e36ab.png",
     "static/media/hero-desk.png": "/Ape-NFT/static/media/hero-desk.6ff8b4be1f9d7d85c9ca.png",
@@ -9,7 +9,11 @@
     "static/media/hero-tab.png": "/Ape-NFT/static/media/hero-tab.2dbc0f26458442832a12.png",
     "static/media/hero-mob.png": "/Ape-NFT/static/media/hero-mob.4c7c53efe3f378fab158.png",
     "static/media/about-mob.png": "/Ape-NFT/static/media/about-mob.d698cfd98b950d936c9d.png",
+    "static/media/faq-img2.jpg": "/Ape-NFT/static/media/faq-img2.beeea307597986f7ed74.jpg",
     "static/media/RightGrotesk-CompactBlack.otf": "/Ape-NFT/static/media/RightGrotesk-CompactBlack.965367bf710f347153cc.otf",
+    "static/media/faq-img3.jpg": "/Ape-NFT/static/media/faq-img3.cd3686e519aead04c360.jpg",
+    "static/media/faq-img1.jpg": "/Ape-NFT/static/media/faq-img1.51a25930a1899465a1a4.jpg",
+    "static/media/faq-img4.jpg": "/Ape-NFT/static/media/faq-img4.b8e731abbee82c56669c.jpg",
     "static/media/MessinaSansMono-Regular.ttf": "/Ape-NFT/static/media/MessinaSansMono-Regular.b289391c577f8fd447dd.ttf",
     "static/media/collection-card3.jpg": "/Ape-NFT/static/media/collection-card3.58dd8209ea4635f5f3c7.jpg",
     "static/media/collection-card2.jpg": "/Ape-NFT/static/media/collection-card2.992ac4b301b22cb53e3f.jpg",
@@ -19,10 +23,10 @@
     "static/media/collection-card8.jpg": "/Ape-NFT/static/media/collection-card8.4587683c56a505733b63.jpg",
     "index.html": "/Ape-NFT/index.html",
     "main.b92736dc.css.map": "/Ape-NFT/static/css/main.b92736dc.css.map",
-    "main.23d9bcd6.js.map": "/Ape-NFT/static/js/main.23d9bcd6.js.map"
+    "main.4dd48e92.js.map": "/Ape-NFT/static/js/main.4dd48e92.js.map"
   },
   "entrypoints": [
     "static/css/main.b92736dc.css",
-    "static/js/main.23d9bcd6.js"
+    "static/js/main.4dd48e92.js"
   ]
 }
