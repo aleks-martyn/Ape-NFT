@@ -24,6 +24,16 @@
     url('./fonts/BiroScriptPlus.ttf') format('truetype');
 }
 
+@keyframes move {
+  from {
+    tranform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 :root {
   --primary-text-color: #ffffff;
   --secondary-text-color: #1e1e1e;
