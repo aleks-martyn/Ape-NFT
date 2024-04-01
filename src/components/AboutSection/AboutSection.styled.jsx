@@ -170,38 +170,24 @@ export const Image = styled.img`
 
 export const BannerWrap = styled.div`
   display: flex;
-  gap: 24px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 6px 0 8px;
   background-color: var(--accent-color);
   overflow: hidden;
 
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
   @media screen and (min-width: 1280px) {
-    gap: 36px;
+    max-width: 1440px;
     padding: 6px 0 16px;
-  }
-`;
-
-export const BanerTextWrap = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 24px;
-
-  @media screen and (min-width: 1280px) {
-    gap: 36px;
-  }
-`;
-
-export const BanerText = styled.p`
-  font-family: 'Right Grotesk';
-  font-size: 36px;
-  font-weight: 900;
-  line-height: 1;
-  text-align: left;
-  text-transform: uppercase;
-  white-space: nowrap;
-
-  @media screen and (min-width: 1280px) {
-    font-size: 64px;
   }
 `;
 

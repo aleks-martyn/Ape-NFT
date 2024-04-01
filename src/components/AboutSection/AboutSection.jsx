@@ -1,4 +1,5 @@
 import { Container } from 'components/Container';
+import { Banner } from 'components/Banner';
 import { useMediaQuery } from 'react-responsive';
 import SmallImg from '../../images/about-mob.png';
 import MiddleImg from '../../images/about-tab.png';
@@ -16,11 +17,7 @@ import {
   CrossIcon,
   Image,
   BannerWrap,
-  BanerTextWrap,
-  BanerText,
 } from './AboutSection.styled';
-
-const banerSlogans = ['Destroy stereotypes', 'HAVE NO LIMITS', 'Break rules'];
 
 export const AboutSection = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
@@ -72,13 +69,9 @@ export const AboutSection = () => {
       </Container>
 
       <BannerWrap>
-        {banerSlogans.map((slogan, index) => (
-          <BanerTextWrap key={index}>
-            <BanerText>{slogan}</BanerText>
+        <Banner />
 
-            <CrossIcon width="36px" height="36px" />
-          </BanerTextWrap>
-        ))}
+        <Banner />
       </BannerWrap>
     </StyledSection>
   );
