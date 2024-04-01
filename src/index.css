@@ -41,6 +41,8 @@
   --accent-color: #dc3b5a;
   --btn-color: rgba(30, 30, 30, 0.1);
   --modal-btn-bg-color: rgba(255, 255, 255, 0.1);
+  --placeholder-color: rgba(255, 255, 255, 0.24);
+  --discord-icon-color: #5A65F2;
   --tra: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
