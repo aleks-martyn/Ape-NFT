@@ -91,7 +91,7 @@ export const StyledInput = styled.input`
   height: 48px;
   margin-left: 48px;
   padding: 17px 24px;
-  border: 1px solid var(--secondary-text-color);
+  border: 1px solid var(--primary-text-color);
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   background-color: transparent;
@@ -100,6 +100,11 @@ export const StyledInput = styled.input`
   line-height: 1.17;
   text-transform: uppercase;
   color: var(--primary-text-color);
+  outline: none;
+
+  &:placeholder-shown {
+    border-color: var(--secondary-text-color);
+  }
 
   &::placeholder {
     font-size: 12px;

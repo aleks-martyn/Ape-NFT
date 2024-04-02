@@ -1,4 +1,4 @@
-import { PasswordIcon } from 'components/PasswordIcon';
+import { WalletIcon } from 'components/WalletIcon/index';
 import {
   Wrap,
   CrossIcon,
@@ -41,17 +41,19 @@ export const Mint = () => {
           <StyledInput
             type="text"
             name="username"
+            autoComplete="off"
             placeholder="@username"
             required
           />
         </StyledLabel>
 
         <StyledLabel>
-          <PasswordIcon />
+          <WalletIcon />
 
           <StyledInput
             type="text"
-            name="password"
+            name="wallet"
+            autoComplete="off"
             placeholder="Wallet address"
             required
           />
