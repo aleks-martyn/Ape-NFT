@@ -1,6 +1,6 @@
-import { StyledIcon } from './PasswordIcon.styled';
+import { StyledIcon } from './WalletIcon.styled';
 
-export const PasswordIcon = () => (
+export const WalletIcon = () => (
   <StyledIcon
     width="24"
     height="24"
