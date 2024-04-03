@@ -1,1 +1,1 @@
-export * from "./DiscordIcon";
+export * from './DiscordIcon';

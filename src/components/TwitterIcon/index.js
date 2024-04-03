@@ -1,1 +1,1 @@
-export * from "./TwitterIcon";
+export * from './TwitterIcon';

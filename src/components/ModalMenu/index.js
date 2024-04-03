@@ -1,1 +1,1 @@
-export * from "./ModalMenu";
+export * from './ModalMenu';
