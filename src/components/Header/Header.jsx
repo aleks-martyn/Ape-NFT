@@ -23,7 +23,7 @@ export const Header = () => {
     <StyledHeader>
       <StyledContainer>
         <Wrap>
-          <LogoLink href="/public/index.html">
+          <LogoLink href="../../../public/index.html">
             <LogoIcon />
           </LogoLink>
 
