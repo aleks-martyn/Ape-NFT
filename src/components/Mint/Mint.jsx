@@ -1,4 +1,6 @@
 import { useForm, FormProvider } from 'react-hook-form';
+import { ToastContainer, toast, Zoom } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Input } from 'components/Input';
 import { WalletIcon } from 'components/WalletIcon/index';
 import {
@@ -12,8 +14,25 @@ import {
 
 export const Mint = () => {
   const methods = useForm();
+  const notify = () =>
+    toast('Success!', {
+      autoClose: 3000,
+      theme: 'colored',
+      type: 'success',
+      transition: Zoom,
+    });
 
-  const onSubmit = data => console.log(data);
+  const {
+    formState: { isSubmitted, isSubmitSuccessful, isValid },
+    reset,
+    handleSubmit,
+  } = methods;
+
+  const onSubmit = data => {
+    console.log(data);
+    reset();
+    notify();
+  };
 
   return (
     <Wrap>
@@ -25,7 +44,7 @@ export const Mint = () => {
       </Text>
 
       <FormProvider {...methods}>
-        <StyledForm onSubmit={methods.handleSubmit(onSubmit)} noValidate>
+        <StyledForm onSubmit={handleSubmit(onSubmit)} noValidate>
           <Input id="name" placeholder="@username">
             <StyledDiscordIcon
               xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +60,13 @@ export const Mint = () => {
             <WalletIcon />
           </Input>
 
-          <SubmitBtn type="submit">MINT</SubmitBtn>
+          <SubmitBtn type="submit">
+            {(!isSubmitted || isValid) && 'MINT'}
+            {isSubmitted && isSubmitSuccessful && 'MINTED'}
+            {isSubmitted && !isSubmitSuccessful && !isValid && 'ERROR'}
+          </SubmitBtn>
+
+          <ToastContainer />
         </StyledForm>
       </FormProvider>
     </Wrap>
