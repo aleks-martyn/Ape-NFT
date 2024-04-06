@@ -1,4 +1,5 @@
 import { useMediaQuery } from 'react-responsive';
+import textContent from '../../text-content.json';
 import SmallImg from '../../images/hero-mob.png';
 import MiddleImg from '../../images/hero-tab.png';
 import BigImg from '../../images/hero-desk.png';
@@ -20,17 +21,21 @@ export const Hero = () => {
   const isMaxTablet = useMediaQuery({ query: '(max-width: 1279px)' });
   const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
 
+  const {
+    hero: { firstText, secondText, thirdText },
+  } = textContent;
+
   return (
     <StyledSection>
       <StyledContainer>
-        <Text>diD yOu seE iT ?</Text>
+        <Text>{firstText}</Text>
 
         <SectionTitle>
           <span>YACHT</span>
           <span>APES</span>
         </SectionTitle>
 
-        <Text>Apes aRe eveRywhere</Text>
+        <Text>{secondText}</Text>
 
         {isMobile && <Image src={SmallImg} alt="Hero Ape" />}
         {isMinTablet && isMaxTablet && <Image src={MiddleImg} alt="Hero Ape" />}
@@ -41,10 +46,7 @@ export const Hero = () => {
             <LinkLabel>MEET APES</LinkLabel>
           </StyledLink>
 
-          <Paragraph>
-            Yacht Ape is a collection of unique digital apes that you can own in
-            NFT format
-          </Paragraph>
+          <Paragraph>{thirdText}</Paragraph>
         </InnerWrap>
       </StyledContainer>
     </StyledSection>
