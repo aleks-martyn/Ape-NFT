@@ -24,6 +24,28 @@
     },
     { "title": "Learn more in mind map", "text": "" }
   ],
+  "questions": [
+    {
+      "title": "WHAT IS AN NFT COLLECTION?",
+      "text": "An NFT collection is a group of unique digital assets, each represented by a non-fungible token, typically created around a specific theme or style.",
+      "alt": "First Ape"
+    },
+    {
+      "title": "HOW DO I PURCHASE NFTS FROM A COLLECTION?",
+      "text": "To purchase nfts from a collection, you typically need to use cryptocurrency on a blockchain0based marketplace.",
+      "alt": "Second Ape"
+    },
+    {
+      "title": "CAN I SELL OR TRADE NFTS FROM A COLLECTION?",
+      "text": "Yes, you can sell or trade NFTs from a collection like you would other digital assets.",
+      "alt": "Third Ape"
+    },
+    {
+      "title": "WHAT RIGHTS DO I HAVE AS AN OWNER OF AN NFT?",
+      "text": "As an NFT owner, you can own, transfer, potentially access exclusive content, resell, but don't automatically get copyright or intellectual property rights.",
+      "alt": "Fourth Ape"
+    }
+  ],
   "mint": {
     "text": "Join the YACHT APE community to be one of the first to receive our limited edition NFT"
   }
