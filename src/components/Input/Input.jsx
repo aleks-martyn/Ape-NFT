@@ -1,8 +1,19 @@
 import { useFormContext } from 'react-hook-form';
+import { ErrorMessageComponent } from 'components/ErrorMessage';
 import { InputWrap, StyledLabel, StyledInput } from './Input.styled';
 
 export const Input = ({ id, placeholder, children }) => {
-    const { register } = useFormContext();
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
+
+  const getPatternMessage = id =>
+    id === 'name' ? 'Wrong discord' : 'Wrong address';
+
+  const getPatternValue = id => (id === 'name' ? /[A-Za-z]+/ : /[0-9]/);
+
+  console.log(errors);
 
   return (
     <InputWrap>
@@ -13,13 +24,16 @@ export const Input = ({ id, placeholder, children }) => {
         type="text"
         placeholder={placeholder}
         autoComplete="off"
+        errors={errors}
         {...register(id, {
-          required: {
-            value: true,
-            message: 'required',
+          required: 'This field is required',
+          pattern: {
+            value: getPatternValue(id),
+            message: getPatternMessage(id),
           },
         })}
       />
+      <ErrorMessageComponent id={id} errors={errors} />
     </InputWrap>
   );
 };

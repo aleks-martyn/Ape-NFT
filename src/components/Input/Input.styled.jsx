@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 export const InputWrap = styled.div`
+  position: relative;
   display: flex;
 `;
 
@@ -21,11 +22,23 @@ export const StyledLabel = styled.label`
   }
 `;
 
+const getBorderColorWithPlaceholder = (id, errors) => {
+  const propName = id;
+  return errors[propName]
+    ? 'var(--accent-color)'
+    : 'var(--secondary-text-color)';
+};
+
+const getBorderColor = (id, errors) => {
+  const propName = id;
+  return errors[propName] ? 'var(--accent-color)' : 'var(--primary-text-color)';
+};
+
 export const StyledInput = styled.input`
   width: 168px;
   height: 48px;
   padding: 17px 24px;
-  border: 1px solid var(--primary-text-color);
+  border: 1px solid ${({ id, errors }) => getBorderColor(id, errors)};
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   background-color: transparent;
@@ -37,7 +50,8 @@ export const StyledInput = styled.input`
   outline: none;
 
   &:placeholder-shown {
-    border-color: var(--secondary-text-color);
+    border-color: ${({ id, errors }) =>
+      getBorderColorWithPlaceholder(id, errors)};
   }
 
   &::placeholder {
