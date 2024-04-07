@@ -3,6 +3,8 @@ import { ToastContainer, toast, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Input } from 'components/Input';
 import { WalletIcon } from 'components/WalletIcon/index';
+import textContent from '../../text-content.json';
+import { save } from 'utils/localStorageFunction';
 import {
   Wrap,
   CrossIcon,
@@ -13,7 +15,14 @@ import {
 } from './Mint.styled';
 
 export const Mint = () => {
-  const methods = useForm();
+  const methods = useForm({ criteriaMode: 'all' });
+
+  const {
+    formState: { isSubmitted, isSubmitSuccessful, isValid },
+    reset,
+    handleSubmit,
+  } = methods;
+
   const notify = () =>
     toast('Success!', {
       autoClose: 3000,
@@ -22,26 +31,22 @@ export const Mint = () => {
       transition: Zoom,
     });
 
-  const {
-    formState: { isSubmitted, isSubmitSuccessful, isValid },
-    reset,
-    handleSubmit,
-  } = methods;
-
   const onSubmit = data => {
     console.log(data);
+    save('user-data', data);
     reset();
     notify();
   };
+
+  const {
+    mint: { text },
+  } = textContent;
 
   return (
     <Wrap>
       <CrossIcon />
 
-      <Text>
-        Join the YACHT APE community to be one of the first to receive our
-        limited edition NFT
-      </Text>
+      <Text>{text}</Text>
 
       <FormProvider {...methods}>
         <StyledForm onSubmit={handleSubmit(onSubmit)} noValidate>
