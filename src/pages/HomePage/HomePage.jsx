@@ -9,7 +9,7 @@ import { Slider } from 'components/Slider';
 import { CollectionSlider } from 'components/CollectionSlider';
 import { Mint } from 'components/Mint';
 import { QuestionList } from 'components/FaqSection';
-import { cards } from 'cards';
+import textContent from '../../text-content.json';
 
 import img1 from '../../images/collection-card1.jpg';
 import img2 from '../../images/collection-card2.jpg';
@@ -35,6 +35,8 @@ export default function HomePage() {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
   const isTablet = useMediaQuery({ query: '(min-width: 768px)' });
 
+  const { mapCards } = textContent;
+
   return (
     <>
       <Header />
@@ -45,8 +47,8 @@ export default function HomePage() {
         <AboutSection />
 
         <Section id="m-map" title="MIND map">
-          {isMobile && <Slider items={cards} />}
-          {isTablet && <MindMap items={cards} />}
+          {isMobile && <Slider items={mapCards} />}
+          {isTablet && <MindMap items={mapCards} />}
         </Section>
 
         <Section id="faq" title="FAQ">
