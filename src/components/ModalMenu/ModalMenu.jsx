@@ -31,14 +31,10 @@ export const ModalMenu = ({ onClose }) => {
       if (event.code === 'Escape') onClose();
     };
 
-    document.body.classList.add('no-scroll');
-
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
-
-      document.body.classList.remove('no-scroll');
     };
   }, [onClose]);
 
