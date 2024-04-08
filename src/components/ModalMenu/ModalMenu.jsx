@@ -4,6 +4,7 @@ import { LogoIcon } from 'components/LogoIcon';
 import { TwitterIcon } from 'components/TwitterIcon';
 import { LogomarkIcon } from 'components/LogomarkIcon';
 import { DiscordIcon } from 'components/DiscordIcon';
+import textContent from '../../text-content.json';
 import {
   ModalWin,
   StyledContainer,
@@ -23,7 +24,6 @@ import {
 } from './ModalMenu.styled';
 
 const modalRoot = document.getElementById('modal-root');
-const sectionNames = ['about', 'm-map', 'faq', 'arts', 'mint'];
 
 export const ModalMenu = ({ onClose }) => {
   useEffect(() => {
@@ -41,6 +41,11 @@ export const ModalMenu = ({ onClose }) => {
       document.body.classList.remove('no-scroll');
     };
   }, [onClose]);
+
+  const {
+    footer: { text },
+    sectionNames,
+  } = textContent;
 
   return createPortal(
     <ModalWin>
@@ -106,7 +111,7 @@ export const ModalMenu = ({ onClose }) => {
           </MenuLinkList>
         </StyledNav>
 
-        <LowerText>© Yacht ape 2024 all rights reserved</LowerText>
+        <LowerText>{text}</LowerText>
       </StyledContainer>
     </ModalWin>,
     modalRoot
