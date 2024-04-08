@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
 export const StyledHeader = styled.header`
   position: absolute;
@@ -66,7 +67,7 @@ export const LinkList = styled.ul`
   }
 `;
 
-export const LogoLink = styled.a`
+export const LogoLink = styled(Link)`
   display: flex;
   width: 48px;
   height: 32px;

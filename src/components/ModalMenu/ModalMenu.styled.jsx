@@ -1,4 +1,5 @@
 import { Link } from 'react-scroll';
+import { NavLink } from 'react-router-dom';
 import styled from '@emotion/styled';
 
 export const ModalWin = styled.div`
@@ -64,7 +65,7 @@ export const Wrap = styled.div`
   }
 `;
 
-export const LogoLink = styled.a`
+export const LogoLink = styled(NavLink)`
   display: flex;
   width: 48px;
   height: 32px;
