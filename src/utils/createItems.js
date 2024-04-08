@@ -1,2 +1,2 @@
-export const createQuestions = (items, pictures) =>
+export const createItems = (items, pictures) =>
   items.map((item, index) => ({ ...item, src: pictures[index] }));
