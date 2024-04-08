@@ -47,7 +47,7 @@ export const ModalMenu = ({ onClose }) => {
     <ModalWin>
       <StyledContainer>
         <Wrap>
-          <LogoLink to="/">
+          <LogoLink to="/" onClick={() => onClose()}>
             <LogoIcon />
           </LogoLink>
 
