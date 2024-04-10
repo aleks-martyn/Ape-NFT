@@ -6,12 +6,16 @@ const getBeforeColor = (index, currentIndex) =>
 const getWrapBgColor = (index, currentIndex) =>
   index === currentIndex ? 'var(--secondary-text-color)' : 'transparent';
 
+const getCursor = (index, currentIndex) =>
+  index === currentIndex ? 'default' : 'pointer';
+
 export const QuestionWrap = styled.li`
   position: relative;
   display: flex;
   width: 216px;
   padding: 8px;
   border-radius: 12px;
+  cursor: ${({ index, currentIndex }) => getCursor(index, currentIndex)};
   background-color: ${({ index, currentIndex }) =>
     getWrapBgColor(index, currentIndex)};
   transition: background-color var(--tra);

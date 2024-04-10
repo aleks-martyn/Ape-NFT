@@ -150,6 +150,7 @@ export const StyledLink = styled(Link)`
   border: none;
   text-decoration: none;
   background-color: var(--btn-color);
+  cursor: pointer;
 
   &:hover span {
     color: var(--primary-text-color);

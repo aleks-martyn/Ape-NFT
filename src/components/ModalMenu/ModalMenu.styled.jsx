@@ -225,6 +225,7 @@ export const MenuLink = styled(Link)`
   text-decoration: none;
   color: var(--primary-text-color);
   transition: color var(--tra), text-decoration(--tra);
+  cursor: pointer;
 
   &:hover span {
     color: var(--accent-color);
