@@ -23,7 +23,7 @@ export const QuestionItem = ({
       onClick={() => onClick()}
     >
       <ImageThumb index={index} currentIndex={currentIndex}>
-        <Image src={src} alt={alt} />
+        <Image loading="lazy" src={src} alt={alt} />
       </ImageThumb>
 
       <TextWrap>

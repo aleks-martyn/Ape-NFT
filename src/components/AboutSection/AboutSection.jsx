@@ -59,11 +59,11 @@ export const AboutSection = () => {
             <SecondText>{secondText}</SecondText>
           </SecondTextWrap>
 
-          {isMobile && <Image src={SmallImg} alt="Ape in a cap" />}
+          {isMobile && <Image loading="lazy" src={SmallImg} alt="Ape in a cap" />}
           {isMinTablet && isMaxTablet && (
-            <Image src={MiddleImg} alt="Ape in a cap" />
+            <Image loading="lazy" src={MiddleImg} alt="Ape in a cap" />
           )}
-          {isDesktop && <Image src={BigImg} alt="Ape in a cap" />}
+          {isDesktop && <Image loading="lazy" src={BigImg} alt="Ape in a cap" />}
         </Wrapper>
       </Container>
 
