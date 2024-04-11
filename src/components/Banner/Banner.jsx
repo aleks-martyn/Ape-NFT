@@ -1,3 +1,4 @@
+import textContent from '../../text-content.json';
 import {
   BannerInnerWrap,
   BannerTextWrap,
@@ -5,16 +6,18 @@ import {
   CrossIcon,
 } from './Banner.styled';
 
-const bannerSlogans = ['Destroy stereotypes', 'HAVE NO LIMITS', 'Break rules'];
+export const Banner = () => {
+  const { slogans } = textContent;
 
-export const Banner = () => (
-  <BannerInnerWrap>
-    {bannerSlogans.map((slogan, index) => (
-      <BannerTextWrap key={index}>
-        <BannerText>{slogan}</BannerText>
+  return (
+    <BannerInnerWrap>
+      {slogans.map((slogan, index) => (
+        <BannerTextWrap key={index}>
+          <BannerText>{slogan}</BannerText>
 
-        <CrossIcon width="36px" height="36px" />
-      </BannerTextWrap>
-    ))}
-  </BannerInnerWrap>
-);
+          <CrossIcon width="36px" height="36px" />
+        </BannerTextWrap>
+      ))}
+    </BannerInnerWrap>
+  );
+};
