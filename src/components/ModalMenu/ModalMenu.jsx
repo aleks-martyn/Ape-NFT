@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { LogoIcon } from 'components/LogoIcon';
@@ -112,4 +113,8 @@ export const ModalMenu = ({ onClose }) => {
     </ModalWin>,
     modalRoot
   );
+};
+
+ModalMenu.propTypes = {
+  onClose: PropTypes.func.isRequired,
 };

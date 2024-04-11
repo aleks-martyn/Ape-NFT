@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { ErrorMessage } from '@hookform/error-message';
 import { Message } from './ErrorMessage.styled';
 
@@ -13,3 +14,8 @@ export const ErrorMessageComponent = ({ id, errors }) => (
     }
   />
 );
+
+ErrorMessageComponent.propTypes = {
+  id: PropTypes.string,
+  errors: PropTypes.objectOf(PropTypes.object),
+};

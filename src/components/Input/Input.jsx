@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useFormContext } from 'react-hook-form';
 import { ErrorMessageComponent } from 'components/ErrorMessage';
 import { InputWrap, StyledLabel, StyledInput } from './Input.styled';
@@ -36,4 +37,10 @@ export const Input = ({ id, placeholder, children }) => {
       <ErrorMessageComponent id={id} errors={errors} />
     </InputWrap>
   );
+};
+
+Input.propTypes = {
+  id: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
 };

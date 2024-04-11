@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   QuestionWrap,
   ImageThumb,
@@ -37,4 +38,14 @@ export const QuestionItem = ({
       </TextWrap>
     </QuestionWrap>
   );
+};
+
+QuestionItem.propTypes = {
+  index: PropTypes.number.isRequired,
+  currentIndex: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
