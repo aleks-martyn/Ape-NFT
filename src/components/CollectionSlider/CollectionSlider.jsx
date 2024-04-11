@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { CollectionList } from 'components/CollectionList';
@@ -80,4 +81,10 @@ export const CollectionSlider = ({ items }) => {
       <ControlButtons changeSlide={changeSlide} />
     </>
   );
+};
+
+CollectionSlider.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.objectOf(PropTypes.string.isRequired).isRequired
+  ).isRequired,
 };

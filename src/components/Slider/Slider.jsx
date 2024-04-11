@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { MindMap } from 'components/MindMap';
 import { ControlButtons } from 'components/ControlButtons';
@@ -60,4 +61,10 @@ export const Slider = ({ items }) => {
       <ControlButtons changeSlide={changeSlide} />
     </>
   );
+};
+
+Slider.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.objectOf(PropTypes.string.isRequired).isRequired
+  ).isRequired,
 };
