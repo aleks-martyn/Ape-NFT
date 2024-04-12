@@ -3,8 +3,14 @@ import { Container } from 'components/Container';
 import { Banner } from 'components/Banner';
 import { useMediaQuery } from 'react-responsive';
 import SmallImg from '../../images/about-mob.png';
+import SmallImgX2 from '../../images/about-mob@2x.png';
+import SmallImgX3 from '../../images/about-mob@3x.png';
 import MiddleImg from '../../images/about-tab.png';
+import MiddleImgX2 from '../../images/about-tab@2x.png';
+import MiddleImgX3 from '../../images/about-tab@3x.png';
 import BigImg from '../../images/about-desk.png';
+import BigImgX2 from '../../images/about-desk@2x.png';
+import BigImgX3 from '../../images/about-desk@3x.png';
 import {
   StyledSection,
   Wrapper,
@@ -22,8 +28,6 @@ import {
 
 export const AboutSection = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
-  const isMinTablet = useMediaQuery({ query: '(min-width: 768px)' });
-  const isMaxTablet = useMediaQuery({ query: '(max-width: 1279px)' });
   const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
   const Break = () => <br />;
 
@@ -59,11 +63,21 @@ export const AboutSection = () => {
             <SecondText>{secondText}</SecondText>
           </SecondTextWrap>
 
-          {isMobile && <Image loading="lazy" src={SmallImg} alt="Ape in a cap" />}
-          {isMinTablet && isMaxTablet && (
-            <Image loading="lazy" src={MiddleImg} alt="Ape in a cap" />
-          )}
-          {isDesktop && <Image loading="lazy" src={BigImg} alt="Ape in a cap" />}
+          <picture>
+            <source
+              srcSet={`${BigImg} 1x, ${BigImgX2} 2x, ${BigImgX3} 3x`}
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcSet={`${MiddleImg} 1x, ${MiddleImgX2} 2x, ${MiddleImgX3} 3x`}
+              media="(min-width: 768px)"
+            />
+            <source
+              srcSet={`${SmallImg} 1x, ${SmallImgX2} 2x, ${SmallImgX3} 3x`}
+              media="(max-width: 767px)"
+            />
+            <Image loading="lazy" src={SmallImg} alt="Ape in a cap" />
+          </picture>
         </Wrapper>
       </Container>
 
