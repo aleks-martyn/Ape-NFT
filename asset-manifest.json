@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Ape-NFT/static/css/main.f6f1b9ad.css",
-    "main.js": "/Ape-NFT/static/js/main.2aee7648.js",
+    "main.js": "/Ape-NFT/static/js/main.6847aa24.js",
     "static/media/about-desk@3x.png": "/Ape-NFT/static/media/about-desk@3x.e93040ca11eb841bd471.png",
     "static/media/about-desk@2x.png": "/Ape-NFT/static/media/about-desk@2x.8373585f2a1d2fc10f59.png",
     "static/media/about-tab@3x.png": "/Ape-NFT/static/media/about-tab@3x.caad1cbcea53e68fbdac.png",
@@ -15,13 +15,10 @@
     "static/media/hero-tab.png": "/Ape-NFT/static/media/hero-tab.2dbc0f26458442832a12.png",
     "static/media/hero-mob.png": "/Ape-NFT/static/media/hero-mob.4c7c53efe3f378fab158.png",
     "static/media/about-mob.png": "/Ape-NFT/static/media/about-mob.d698cfd98b950d936c9d.png",
-    "static/media/faq-img2.jpg": "/Ape-NFT/static/media/faq-img2.beeea307597986f7ed74.jpg",
     "static/media/RightGrotesk-CompactBlack.otf": "/Ape-NFT/static/media/RightGrotesk-CompactBlack.965367bf710f347153cc.otf",
-    "static/media/faq-img3.jpg": "/Ape-NFT/static/media/faq-img3.cd3686e519aead04c360.jpg",
-    "static/media/faq-img1.jpg": "/Ape-NFT/static/media/faq-img1.51a25930a1899465a1a4.jpg",
-    "static/media/faq-img4.jpg": "/Ape-NFT/static/media/faq-img4.b8e731abbee82c56669c.jpg",
     "static/media/MessinaSansMono-Regular.ttf": "/Ape-NFT/static/media/MessinaSansMono-Regular.b289391c577f8fd447dd.ttf",
     "static/media/collection-card3.jpg": "/Ape-NFT/static/media/collection-card3.58dd8209ea4635f5f3c7.jpg",
+    "static/media/faq-img2.jpg": "/Ape-NFT/static/media/faq-img2.c6afc91fc6ac6db8a9cd.jpg",
     "static/media/collection-card2.jpg": "/Ape-NFT/static/media/collection-card2.992ac4b301b22cb53e3f.jpg",
     "static/media/collection-card7.jpg": "/Ape-NFT/static/media/collection-card7.4efb9e582076c4b31e9b.jpg",
     "static/media/collection-card6.jpg": "/Ape-NFT/static/media/collection-card6.7807fbb0fdf6f31d9605.jpg",
@@ -29,10 +26,10 @@
     "static/media/collection-card8.jpg": "/Ape-NFT/static/media/collection-card8.4587683c56a505733b63.jpg",
     "index.html": "/Ape-NFT/index.html",
     "main.f6f1b9ad.css.map": "/Ape-NFT/static/css/main.f6f1b9ad.css.map",
-    "main.2aee7648.js.map": "/Ape-NFT/static/js/main.2aee7648.js.map"
+    "main.6847aa24.js.map": "/Ape-NFT/static/js/main.6847aa24.js.map"
   },
   "entrypoints": [
     "static/css/main.f6f1b9ad.css",
-    "static/js/main.2aee7648.js"
+    "static/js/main.6847aa24.js"
   ]
 }
