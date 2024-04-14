@@ -4,8 +4,8 @@ import { Wrap } from './CollectionList.styled';
 
 export const CollectionList = ({ items, slide }) => (
   <Wrap slide={slide}>
-    {items.map(({ src, alt }, index) => (
-      <CollectionCard key={index} src={src} alt={alt} />
+    {items.map(({ src, alt, srcSet }, index) => (
+      <CollectionCard key={index} src={src} alt={alt} srcSet={srcSet} />
     ))}
   </Wrap>
 );

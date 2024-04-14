@@ -13,6 +13,7 @@ export const QuestionItem = ({
   text,
   src,
   alt,
+  srcSet,
   index,
   currentIndex,
   onClick,
@@ -24,7 +25,7 @@ export const QuestionItem = ({
       onClick={() => onClick()}
     >
       <ImageThumb index={index} currentIndex={currentIndex}>
-        <Image loading="lazy" src={src} alt={alt} />
+        <Image loading="lazy" src={src} alt={alt} srcSet={srcSet} />
       </ImageThumb>
 
       <TextWrap>
@@ -47,5 +48,6 @@ QuestionItem.propTypes = {
   text: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
+  srcSet: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };

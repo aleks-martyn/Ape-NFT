@@ -1,23 +1,19 @@
 import { useState } from 'react';
 import { QuestionItem } from 'components/QuestionItem';
 import { StyledList } from './FaqSection.styled';
-import img1 from '../../images/faq-img1.jpg';
-import img2 from '../../images/faq-img2.jpg';
-import img3 from '../../images/faq-img3.jpg';
-import img4 from '../../images/faq-img4.jpg';
 import textContent from '../../text-content.json';
 import { createItems } from 'utils/createItems';
+import { images } from 'faqImages';
 
 export const QuestionList = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const images = [img1, img2, img3, img4];
   const { questions } = textContent;
   const faqs = createItems(questions, images);
 
   return (
     <StyledList>
-      {faqs.map(({ title, text, src, alt }, index) => (
+      {faqs.map(({ title, text, src, alt, srcSet }, index) => (
         <QuestionItem
           key={index}
           index={index}
@@ -26,6 +22,7 @@ export const QuestionList = () => {
           text={text}
           src={src}
           alt={alt}
+          srcSet={srcSet}
           onClick={() => setCurrentIndex(index)}
         />
       ))}
