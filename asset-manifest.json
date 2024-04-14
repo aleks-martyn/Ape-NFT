@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Ape-NFT/static/css/main.f6f1b9ad.css",
-    "main.js": "/Ape-NFT/static/js/main.6847aa24.js",
+    "main.js": "/Ape-NFT/static/js/main.21152545.js",
     "static/media/about-desk@3x.png": "/Ape-NFT/static/media/about-desk@3x.e93040ca11eb841bd471.png",
     "static/media/about-desk@2x.png": "/Ape-NFT/static/media/about-desk@2x.8373585f2a1d2fc10f59.png",
     "static/media/about-tab@3x.png": "/Ape-NFT/static/media/about-tab@3x.caad1cbcea53e68fbdac.png",
@@ -16,7 +16,31 @@
     "static/media/hero-mob.png": "/Ape-NFT/static/media/hero-mob.4c7c53efe3f378fab158.png",
     "static/media/about-mob.png": "/Ape-NFT/static/media/about-mob.d698cfd98b950d936c9d.png",
     "static/media/RightGrotesk-CompactBlack.otf": "/Ape-NFT/static/media/RightGrotesk-CompactBlack.965367bf710f347153cc.otf",
+    "static/media/collection-card3@3x.jpg": "/Ape-NFT/static/media/collection-card3@3x.4bf635fe3df80e595885.jpg",
+    "static/media/faq-img2@3x.jpg": "/Ape-NFT/static/media/faq-img2@3x.a48b521c4991f2c6e470.jpg",
+    "static/media/collection-card7@3x.jpg": "/Ape-NFT/static/media/collection-card7@3x.7973157030b13c6637d0.jpg",
+    "static/media/collection-card2@3x.jpg": "/Ape-NFT/static/media/collection-card2@3x.fd6df5bafd50785443c5.jpg",
+    "static/media/collection-card1@3x.jpg": "/Ape-NFT/static/media/collection-card1@3x.5127afc03cef6afb4af0.jpg",
+    "static/media/collection-card6@3x.jpg": "/Ape-NFT/static/media/collection-card6@3x.e1cdaed6ca3f80c83664.jpg",
+    "static/media/collection-card5@3x.jpg": "/Ape-NFT/static/media/collection-card5@3x.f5a3620ce36388104f1e.jpg",
     "static/media/MessinaSansMono-Regular.ttf": "/Ape-NFT/static/media/MessinaSansMono-Regular.b289391c577f8fd447dd.ttf",
+    "static/media/collection-card8@3x.jpg": "/Ape-NFT/static/media/collection-card8@3x.569af3750aaf202879c6.jpg",
+    "static/media/faq-img4@3x.jpg": "/Ape-NFT/static/media/faq-img4@3x.e46bb8e8a6f23deb2f7b.jpg",
+    "static/media/collection-card4@3x.jpg": "/Ape-NFT/static/media/collection-card4@3x.c1b24ddcb391cd639f15.jpg",
+    "static/media/faq-img1@3x.jpg": "/Ape-NFT/static/media/faq-img1@3x.e2b3e57c3c7db12b46ae.jpg",
+    "static/media/faq-img3@3x.jpg": "/Ape-NFT/static/media/faq-img3@3x.248126bf1c685f8cfb64.jpg",
+    "static/media/collection-card3@2x.jpg": "/Ape-NFT/static/media/collection-card3@2x.77bd594f2b8bfccf1151.jpg",
+    "static/media/faq-img2@2x.jpg": "/Ape-NFT/static/media/faq-img2@2x.015d11c864420b516af9.jpg",
+    "static/media/collection-card7@2x.jpg": "/Ape-NFT/static/media/collection-card7@2x.905a79cf9dddf56c0e9b.jpg",
+    "static/media/collection-card2@2x.jpg": "/Ape-NFT/static/media/collection-card2@2x.e4ac5645f287a0b72c54.jpg",
+    "static/media/collection-card6@2x.jpg": "/Ape-NFT/static/media/collection-card6@2x.2823292fd5a45bb7e0aa.jpg",
+    "static/media/collection-card1@2x.jpg": "/Ape-NFT/static/media/collection-card1@2x.11d13c728f6bedee0438.jpg",
+    "static/media/collection-card5@2x.jpg": "/Ape-NFT/static/media/collection-card5@2x.e311fb774ba0b3aaa778.jpg",
+    "static/media/collection-card8@2x.jpg": "/Ape-NFT/static/media/collection-card8@2x.92dcd09958a3d6d3503f.jpg",
+    "static/media/faq-img4@2x.jpg": "/Ape-NFT/static/media/faq-img4@2x.ebddab08e65147d4b03e.jpg",
+    "static/media/collection-card4@2x.jpg": "/Ape-NFT/static/media/collection-card4@2x.76d54bb78f1c41b6b789.jpg",
+    "static/media/faq-img3@2x.jpg": "/Ape-NFT/static/media/faq-img3@2x.8dea1b67f05bd8a38e71.jpg",
+    "static/media/faq-img1@2x.jpg": "/Ape-NFT/static/media/faq-img1@2x.f4509dfc673ccefa07de.jpg",
     "static/media/collection-card3.jpg": "/Ape-NFT/static/media/collection-card3.58dd8209ea4635f5f3c7.jpg",
     "static/media/faq-img2.jpg": "/Ape-NFT/static/media/faq-img2.c6afc91fc6ac6db8a9cd.jpg",
     "static/media/collection-card2.jpg": "/Ape-NFT/static/media/collection-card2.992ac4b301b22cb53e3f.jpg",
@@ -26,10 +50,10 @@
     "static/media/collection-card8.jpg": "/Ape-NFT/static/media/collection-card8.4587683c56a505733b63.jpg",
     "index.html": "/Ape-NFT/index.html",
     "main.f6f1b9ad.css.map": "/Ape-NFT/static/css/main.f6f1b9ad.css.map",
-    "main.6847aa24.js.map": "/Ape-NFT/static/js/main.6847aa24.js.map"
+    "main.21152545.js.map": "/Ape-NFT/static/js/main.21152545.js.map"
   },
   "entrypoints": [
     "static/css/main.f6f1b9ad.css",
-    "static/js/main.6847aa24.js"
+    "static/js/main.21152545.js"
   ]
 }
