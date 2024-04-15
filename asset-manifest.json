@@ -1,15 +1,21 @@
 {
   "files": {
     "main.css": "/Ape-NFT/static/css/main.f6f1b9ad.css",
-    "main.js": "/Ape-NFT/static/js/main.21152545.js",
+    "main.js": "/Ape-NFT/static/js/main.3ef6cf61.js",
     "static/media/about-desk@3x.png": "/Ape-NFT/static/media/about-desk@3x.e93040ca11eb841bd471.png",
+    "static/media/hero-desk@3x.png": "/Ape-NFT/static/media/hero-desk@3x.5aff557a328a69c3574c.png",
     "static/media/about-desk@2x.png": "/Ape-NFT/static/media/about-desk@2x.8373585f2a1d2fc10f59.png",
+    "static/media/hero-desk@2x.png": "/Ape-NFT/static/media/hero-desk@2x.1392e0025a27790ad102.png",
     "static/media/about-tab@3x.png": "/Ape-NFT/static/media/about-tab@3x.caad1cbcea53e68fbdac.png",
+    "static/media/hero-tab@3x.png": "/Ape-NFT/static/media/hero-tab@3x.9cc84ccaa36466390dd7.png",
+    "static/media/hero-mob@3x.png": "/Ape-NFT/static/media/hero-mob@3x.e45d2d6256cbe9738bb2.png",
     "static/media/BiroScriptPlus.ttf": "/Ape-NFT/static/media/BiroScriptPlus.8f40d0e26da891712200.ttf",
     "static/media/about-mob@3x.png": "/Ape-NFT/static/media/about-mob@3x.ca0d3af5dd6d52ccd5d6.png",
     "static/media/about-tab@2x.png": "/Ape-NFT/static/media/about-tab@2x.da4d3a50792e353e17a8.png",
+    "static/media/hero-tab@2x.png": "/Ape-NFT/static/media/hero-tab@2x.b28c2f3682035d3b5bf6.png",
     "static/media/about-desk.png": "/Ape-NFT/static/media/about-desk.19b6ea4c5011b37e36ab.png",
     "static/media/hero-desk.png": "/Ape-NFT/static/media/hero-desk.6ff8b4be1f9d7d85c9ca.png",
+    "static/media/hero-mob@2x.png": "/Ape-NFT/static/media/hero-mob@2x.3a44512d3f626c445e41.png",
     "static/media/about-mob@2x.png": "/Ape-NFT/static/media/about-mob@2x.ff5b2a24166911c543d4.png",
     "static/media/about-tab.png": "/Ape-NFT/static/media/about-tab.b8d3f9e2b64ae411d2b4.png",
     "static/media/hero-tab.png": "/Ape-NFT/static/media/hero-tab.2dbc0f26458442832a12.png",
@@ -50,10 +56,10 @@
     "static/media/collection-card8.jpg": "/Ape-NFT/static/media/collection-card8.4587683c56a505733b63.jpg",
     "index.html": "/Ape-NFT/index.html",
     "main.f6f1b9ad.css.map": "/Ape-NFT/static/css/main.f6f1b9ad.css.map",
-    "main.21152545.js.map": "/Ape-NFT/static/js/main.21152545.js.map"
+    "main.3ef6cf61.js.map": "/Ape-NFT/static/js/main.3ef6cf61.js.map"
   },
   "entrypoints": [
     "static/css/main.f6f1b9ad.css",
-    "static/js/main.21152545.js"
+    "static/js/main.3ef6cf61.js"
   ]
 }
