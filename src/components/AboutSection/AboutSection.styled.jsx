@@ -155,19 +155,6 @@ export const SecondText = styled.p`
   }
 `;
 
-export const Image = styled.img`
-  margin-left: auto;
-  margin-right: auto;
-
-  @media screen and (min-width: 768px) {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin-left: 0;
-    margin-right: 0;
-  }
-`;
-
 export const BannerWrap = styled.div`
   display: flex;
   width: 100%;
@@ -192,7 +179,12 @@ export const BannerWrap = styled.div`
 `;
 
 export const CrossIcon = styled(CloseSharpIcon)`
-  width: ${({ width }) => width};
-  height: ${({ height }) => height};
+  width: 24px;
+  height: 24px;
   fill: var(--primary-text-color);
+
+  @media screen and (min-width: 1280px) {
+    width: 36px;
+    height: 36px;
+  }
 `;
