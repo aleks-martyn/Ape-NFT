@@ -93,8 +93,16 @@ export const Text = styled.p`
   font-size: 16px;
   line-height: 1.7;
 
+  &:last-of-type {
+    margin-bottom: 4px;
+  }
+
   @media screen and (min-width: 768px) {
     font-size: 20px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   @media screen and (min-width: 1280px) {
@@ -103,24 +111,6 @@ export const Text = styled.p`
     &:last-of-type {
       margin-left: 120px;
     }
-  }
-`;
-
-export const Image = styled.img`
-  margin-top: 4px;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media screen and (min-width: 768px) {
-    margin-top: 0;
-    position: absolute;
-    bottom: -123px;
-    left: 207px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    bottom: -200px;
-    left: 380px;
   }
 `;
 

@@ -1,14 +1,11 @@
-import { useMediaQuery } from 'react-responsive';
 import textContent from '../../text-content.json';
-import SmallImg from '../../images/hero-mob.png';
-import MiddleImg from '../../images/hero-tab.png';
-import BigImg from '../../images/hero-desk.png';
+import { ImageSet } from 'components/ImageSet';
+import { images } from 'heroImageSet';
 import {
   StyledSection,
   StyledContainer,
   SectionTitle,
   Text,
-  Image,
   InnerWrap,
   StyledLink,
   LinkLabel,
@@ -16,11 +13,6 @@ import {
 } from './Hero.styled';
 
 export const Hero = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
-  const isMinTablet = useMediaQuery({ query: '(min-width: 768px)' });
-  const isMaxTablet = useMediaQuery({ query: '(max-width: 1279px)' });
-  const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
-
   const {
     hero: { firstText, secondText, thirdText },
   } = textContent;
@@ -37,9 +29,7 @@ export const Hero = () => {
 
         <Text>{secondText}</Text>
 
-        {isMobile && <Image src={SmallImg} alt="Hero Ape" />}
-        {isMinTablet && isMaxTablet && <Image src={MiddleImg} alt="Hero Ape" />}
-        {isDesktop && <Image src={BigImg} alt="Hero Ape" />}
+        <ImageSet id="hero" pictures={images} alt="Hero Ape" loading="eager" />
 
         <InnerWrap>
           <StyledLink to="mint" smooth={true} duration={500}>
