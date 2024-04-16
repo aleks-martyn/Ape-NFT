@@ -4,7 +4,6 @@ export const Wrap = styled.div`
   display: flex;
   width: 150px;
   justify-content: space-between;
-  margin-top: 24px;
   margin-left: auto;
   margin-right: auto;
 `;

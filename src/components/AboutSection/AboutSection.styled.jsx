@@ -67,15 +67,13 @@ export const FirstTextWrap = styled.div`
 
   @media screen and (min-width: 768px) {
     width: 275px;
-    margin-top: 10px;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
+    padding-top: 10px;
+    margin: 0;
   }
 
   @media screen and (min-width: 1280px) {
     width: 409px;
-    margin-top: 22px;
+    padding-top: 22px;
   }
 `;
 

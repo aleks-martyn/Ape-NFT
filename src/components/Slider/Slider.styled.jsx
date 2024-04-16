@@ -5,6 +5,7 @@ export const SliderWrap = styled.div`
   height: 242px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 24px;
   border-radius: 12px;
   overflow: hidden;
 `;
