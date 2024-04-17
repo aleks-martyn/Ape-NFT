@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import { Link } from 'react-scroll';
 
 export const StyledSection = styled.section`
-  margin-top: 54px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 36px;
@@ -27,7 +26,6 @@ export const StyledSection = styled.section`
 
   @media screen and (min-width: 1280px) {
     max-width: 1408px;
-    margin-top: 16px;
     padding-top: 200px;
     padding-bottom: 200px;
     border-radius: 24px;

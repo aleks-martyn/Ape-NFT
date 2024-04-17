@@ -12,6 +12,7 @@ import { QuestionList } from 'components/FaqSection';
 import textContent from '../../text-content.json';
 import { createItems } from 'utils/createItems';
 import { images } from 'collection';
+import { StyledMain } from './HomePage.styled';
 
 export default function HomePage() {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
@@ -24,7 +25,7 @@ export default function HomePage() {
     <>
       <Header />
 
-      <main>
+      <StyledMain>
         <Hero />
 
         <AboutSection />
@@ -45,7 +46,7 @@ export default function HomePage() {
         <Section id="mint" title="Are you in?">
           <Mint />
         </Section>
-      </main>
+      </StyledMain>
 
       <Footer />
     </>
