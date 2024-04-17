@@ -1,12 +1,12 @@
-import SmallImg from './images/hero-mob.png';
-import SmallImgX2 from './images/hero-mob@2x.png';
-import SmallImgX3 from './images/hero-mob@3x.png';
-import MiddleImg from './images/hero-tab.png';
-import MiddleImgX2 from './images/hero-tab@2x.png';
-import MiddleImgX3 from './images/hero-tab@3x.png';
-import BigImg from './images/hero-desk.png';
-import BigImgX2 from './images/hero-desk@2x.png';
-import BigImgX3 from './images/hero-desk@3x.png';
+import SmallImg from './images/hero-mob.webp';
+import SmallImgX2 from './images/hero-mob@2x.webp';
+import SmallImgX3 from './images/hero-mob@3x.webp';
+import MiddleImg from './images/hero-tab.webp';
+import MiddleImgX2 from './images/hero-tab@2x.webp';
+import MiddleImgX3 from './images/hero-tab@3x.webp';
+import BigImg from './images/hero-desk.webp';
+import BigImgX2 from './images/hero-desk@2x.webp';
+import BigImgX3 from './images/hero-desk@3x.webp';
 
 export const images = [
   {
