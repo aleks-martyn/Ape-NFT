@@ -1,25 +1,33 @@
 import styled from '@emotion/styled';
-import CloseSharpIcon from '@mui/icons-material/CloseSharp';
+import CrossIcon from '../../images/cross.svg';
 
 export const Wrap = styled.div`
+  position: relative;
+  padding-top: 52px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   align-items: center;
 
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    background-image: url(${CrossIcon});
+  }
+
   @media screen and (min-width: 768px) {
+    padding-top: 60px;
     gap: 24px;
   }
 
   @media screen and (min-width: 1280px) {
+    padding-top: 76px;
     gap: 40px;
   }
-`;
-
-export const CrossIcon = styled(CloseSharpIcon)`
-  width: 36px;
-  height: 36px;
-  fill: var(--primary-text-color);
 `;
 
 export const Text = styled.p`
@@ -57,16 +65,6 @@ export const StyledForm = styled.form`
     width: 397px;
     gap: 24px;
   }
-`;
-
-export const StyledDiscordIcon = styled.svg`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  transform: translate(-50%, -50%);
-  fill: var(--discord-icon-color);
 `;
 
 export const SubmitBtn = styled.button`

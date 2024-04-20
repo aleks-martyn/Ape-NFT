@@ -3,7 +3,7 @@ import { useFormContext } from 'react-hook-form';
 import { ErrorMessageComponent } from 'components/ErrorMessage';
 import { InputWrap, StyledLabel, StyledInput } from './Input.styled';
 
-export const Input = ({ id, placeholder, children }) => {
+export const Input = ({ id, placeholder }) => {
   const {
     register,
     formState: { errors },
@@ -18,7 +18,7 @@ export const Input = ({ id, placeholder, children }) => {
 
   return (
     <InputWrap>
-      <StyledLabel htmlFor={id}>{children}</StyledLabel>
+      <StyledLabel htmlFor={id} name={id}></StyledLabel>
 
       <StyledInput
         id={id}
@@ -42,5 +42,4 @@ export const Input = ({ id, placeholder, children }) => {
 Input.propTypes = {
   id: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
-  children: PropTypes.element.isRequired,
 };

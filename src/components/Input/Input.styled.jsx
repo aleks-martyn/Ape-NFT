@@ -1,9 +1,13 @@
 import styled from '@emotion/styled';
+import DiscordIcon from '../../images/discord-blue.svg';
+import AddressIcon from '../../images/address-icon.svg';
 
 export const InputWrap = styled.div`
   position: relative;
   display: flex;
 `;
+
+const getIcon = id => (id === 'name' ? DiscordIcon : AddressIcon);
 
 export const StyledLabel = styled.label`
   position: relative;
@@ -13,6 +17,18 @@ export const StyledLabel = styled.label`
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   background-color: var(--secondary-text-color);
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(${({ name }) => getIcon(name)});
+  }
 
   @media screen and (min-width: 1280px) {
     width: 64px;
