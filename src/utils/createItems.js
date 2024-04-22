@@ -1,2 +1,2 @@
-export const createItems = (items, pictures) =>
-  items.map((item, index) => ({ ...item, ...pictures[index] }));
+export const createItems = (items, elements) =>
+  items.map((item, index) => ({ ...item, ...elements[index] }));

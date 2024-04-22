@@ -61,5 +61,10 @@
     { "alt": "Seventh Ape" },
     { "alt": "Eighth Ape" }
   ],
-  "slogans": ["Destroy stereotypes", "HAVE NO LIMITS", "Break rules"]
+  "slogans": ["Destroy stereotypes", "HAVE NO LIMITS", "Break rules"],
+  "socialLinks": [
+    { "url": "https://discord.com" },
+    { "url": "https://logomark.com" },
+    { "url": "https://www.twitter.com" }
+  ]
 }
