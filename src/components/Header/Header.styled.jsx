@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom';
 
 export const StyledHeader = styled.header`
   position: absolute;
@@ -54,29 +53,6 @@ export const InnerWrap = styled.div`
 
   @media screen and (min-width: 1280px) {
     gap: 15px;
-  }
-`;
-
-export const LogoLink = styled(Link)`
-  display: flex;
-  width: 48px;
-  height: 32px;
-  padding: 0;
-  padding-top: 8px;
-  border: none;
-  align-items: center;
-  justify-content: center;
-  color: var(--secondary-text-color);
-  transition: color var(--tra);
-
-  &:hover {
-    color: var(--primary-text-color);
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 72px;
-    height: 50px;
-    padding-top: 15px;
   }
 `;
 

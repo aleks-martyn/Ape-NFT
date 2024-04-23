@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ModalMenu } from 'components/ModalMenu';
+import { LogoLink } from 'components/LogoLink';
 import { LinkList } from 'components/LinkList';
-import { LogoIcon } from 'components/LogoIcon';
 import { icons } from 'socialIcons';
 import {
   StyledHeader,
@@ -9,7 +9,6 @@ import {
   Wrap,
   InnerWrap,
   BtnLabel,
-  LogoLink,
   MenuBtn,
 } from './Header.styled';
 
@@ -20,9 +19,7 @@ export const Header = () => {
     <StyledHeader>
       <StyledContainer>
         <Wrap>
-          <LogoLink to="/">
-            <LogoIcon />
-          </LogoLink>
+          <LogoLink component="header" />
 
           <InnerWrap>
             <MenuBtn
