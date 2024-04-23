@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 export const StyledSection = styled.section`
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
   padding-top: 36px;
   padding-bottom: 19px;
   border-radius: 12px;
@@ -19,6 +20,7 @@ export const StyledSection = styled.section`
 
   @media screen and (min-width: 768px) {
     max-width: 736px;
+    margin-bottom: 40px;
     padding-top: 123px;
     padding-bottom: 123px;
     border-radius: 16px;
@@ -26,6 +28,7 @@ export const StyledSection = styled.section`
 
   @media screen and (min-width: 1280px) {
     max-width: 1408px;
+    margin-bottom: 60px;
     padding-top: 200px;
     padding-bottom: 200px;
     border-radius: 24px;
