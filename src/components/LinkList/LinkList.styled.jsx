@@ -1,20 +1,10 @@
 import styled from '@emotion/styled';
-
-const getDisplay = componentName =>
-  componentName === 'header' ? 'flex' : 'none';
+import { getDisplay } from 'utils/getDisplay';
+import { getColor } from 'utils/getColor';
+import { getHoverColor } from 'utils/getHoverColor';
 
 const getBgColor = componentName =>
   componentName === 'header' ? 'var(--btn-color)' : 'var(--modal-btn-bg-color)';
-
-const getColor = componentName =>
-  componentName === 'header'
-    ? 'var(--secondary-text-color)'
-    : 'var(--primary-text-color)';
-
-const getHoverColor = componentName =>
-  componentName === 'header'
-    ? 'var(--primary-text-color)'
-    : 'var(--accent-color)';
 
 export const List = styled.ul`
   display: flex;
