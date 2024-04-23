@@ -1,5 +1,4 @@
 import { Link } from 'react-scroll';
-import { NavLink } from 'react-router-dom';
 import styled from '@emotion/styled';
 
 export const ModalWin = styled.div`
@@ -65,41 +64,10 @@ export const Wrap = styled.div`
   }
 `;
 
-export const LogoLink = styled(NavLink)`
-  display: flex;
-  width: 48px;
-  height: 32px;
-  padding: 0;
-  padding-top: 8px;
-  border: none;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary-text-color);
-  transition: color var(--tra);
-
-  &:hover {
-    color: var(--accent-color);
-  }
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-`;
-
 export const InnerWrap = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
-`;
-
-export const LinkList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
 `;
 
 export const BtnLabel = styled.span`
@@ -149,28 +117,6 @@ export const CloseBtn = styled.button`
     height: 80px;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
-  }
-`;
-
-export const SocialLink = styled.a`
-  display: flex;
-  width: 48px;
-  height: 48px;
-  border-radius: 8px;
-  border: none;
-  background-color: var(--modal-btn-bg-color);
-  color: var(--primary-text-color);
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  transition: color var(--tra);
-
-  &:hover {
-    color: var(--accent-color);
-  }
-
-  @media screen and (min-width: 768px) {
-    display: none;
   }
 `;
 

@@ -1,21 +1,17 @@
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { LogoIcon } from 'components/LogoIcon';
-import { TwitterIcon } from 'components/TwitterIcon';
-import { LogomarkIcon } from 'components/LogomarkIcon';
-import { DiscordIcon } from 'components/DiscordIcon';
+import { LogoLink } from 'components/LogoLink';
+import { LinkList } from 'components/LinkList';
 import textContent from '../../text-content.json';
+import { icons } from 'socialIcons';
 import {
   ModalWin,
   StyledContainer,
   Wrap,
-  LogoLink,
   BtnLabel,
   CloseBtn,
-  SocialLink,
   InnerWrap,
-  LinkList,
   MenuLinkList,
   MenuListItem,
   MenuLink,
@@ -48,46 +44,14 @@ export const ModalMenu = ({ onClose }) => {
     <ModalWin>
       <StyledContainer>
         <Wrap>
-          <LogoLink to="/" onClick={() => onClose()}>
-            <LogoIcon />
-          </LogoLink>
+          <LogoLink onClick={() => onClose()} component="menu" />
 
           <InnerWrap>
             <CloseBtn type="button" onClick={() => onClose()}>
               <BtnLabel>CLOSE</BtnLabel>
             </CloseBtn>
 
-            <LinkList>
-              <li>
-                <SocialLink
-                  href="https://discord.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <DiscordIcon />
-                </SocialLink>
-              </li>
-
-              <li>
-                <SocialLink
-                  href="https://logomark.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <LogomarkIcon />
-                </SocialLink>
-              </li>
-
-              <li>
-                <SocialLink
-                  href="https://www.twitter.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <TwitterIcon />
-                </SocialLink>
-              </li>
-            </LinkList>
+            <LinkList items={icons} component="menu" />
           </InnerWrap>
         </Wrap>
 
