@@ -14,7 +14,6 @@ import {
   LastString,
   SecondTextWrap,
   SecondText,
-  CrossIcon,
   BannerWrap,
 } from './AboutSection.styled';
 
@@ -45,8 +44,6 @@ export const AboutSection = () => {
           </FirstTextWrap>
 
           <SecondTextWrap>
-            <CrossIcon />
-
             <SecondText>{secondText}</SecondText>
           </SecondTextWrap>
 

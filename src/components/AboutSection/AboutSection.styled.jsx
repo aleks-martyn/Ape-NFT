@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
-import CloseSharpIcon from '@mui/icons-material/CloseSharp';
+import SmallCrossIcon from '../../images/small-cross.svg';
+import CrossIcon from '../../images/cross.svg';
 
 export const StyledSection = styled.section`
   padding-top: 30px;
@@ -115,18 +116,34 @@ export const LastString = styled.p`
 `;
 
 export const SecondTextWrap = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
+  position: relative;
+  width: 216px;
+  padding-top: 40px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
-  width: 216px;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(${SmallCrossIcon});
+
+    @media screen and (min-width: 1280px) {
+      width: 36px;
+      height: 36px;
+      background-image: url(${CrossIcon});
+    }
+  }
 
   @media screen and (min-width: 768px) {
     width: 269px;
-    gap: 24px;
+    padding-top: 48px;
     margin-bottom: 36px;
     margin-left: 0;
     margin-right: 0;
@@ -134,7 +151,7 @@ export const SecondTextWrap = styled.div`
 
   @media screen and (min-width: 1280px) {
     width: 417px;
-    gap: 36px;
+    padding-top: 72px;
     margin-bottom: 40px;
   }
 `;
@@ -176,16 +193,5 @@ export const BannerWrap = styled.div`
   @media screen and (min-width: 1280px) {
     max-width: 1440px;
     padding: 6px 0 16px;
-  }
-`;
-
-export const CrossIcon = styled(CloseSharpIcon)`
-  width: 24px;
-  height: 24px;
-  fill: var(--primary-text-color);
-
-  @media screen and (min-width: 1280px) {
-    width: 36px;
-    height: 36px;
   }
 `;

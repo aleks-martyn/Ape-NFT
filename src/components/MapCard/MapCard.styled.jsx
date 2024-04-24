@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
-import NorthEastIcon from '@mui/icons-material/NorthEast';
+import ArrowIcon from '../../images/up-left-arrow.svg';
+import BigArrowIcon from '../../images/up-left-big-arrow.svg';
 
 const getBgColor = title =>
   title.includes('Learn')
@@ -63,21 +64,10 @@ export const CardTitle = styled.h3`
   }
 `;
 
-export const ArrowIcon = styled(NorthEastIcon)`
-  margin-left: auto;
-  width: 48px;
-  height: 48px;
-  fill: var(--primary-text-color);
-
-  @media screen and (min-width: 1280px) {
-    width: 64px;
-    height: 64px;
-`;
-
 export const StyledLink = styled.a`
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  position: relative;
+  align-items: flex-end;
   box-sizing: border-box;
   width: 216px;
   height: 242px;
@@ -86,6 +76,23 @@ export const StyledLink = styled.a`
   background-color: ${({ title }) => getBgColor(title)};
   text-decoration: none;
   color: var(--primary-text-color);
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-image: url(${ArrowIcon});
+
+    @media screen and (min-width: 1280px) {
+      width: 64px;
+      height: 64px;
+      background-image: url(${BigArrowIcon});
+    }
+  }
 
   @media screen and (min-width: 768px) {
     width: 284px;
@@ -112,6 +119,7 @@ export const Linklabel = styled.span`
   text-transform: uppercase;
 
   @media screen and (min-width: 1280px) {
+    width: 456px;
     font-size: 64px;
   }
 `;

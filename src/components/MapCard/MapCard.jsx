@@ -3,7 +3,6 @@ import {
   Wrap,
   CardText,
   CardTitle,
-  ArrowIcon,
   StyledLink,
   Linklabel,
 } from './MapCard.styled';
@@ -23,8 +22,6 @@ export const MapCard = ({ title, text, index }) => (
         rel="noreferrer noopener"
         title={title}
       >
-        <ArrowIcon />
-
         <Linklabel>
           Learn
           <br /> more

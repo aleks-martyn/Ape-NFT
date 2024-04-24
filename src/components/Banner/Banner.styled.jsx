@@ -1,39 +1,47 @@
 import styled from '@emotion/styled';
-import CloseSharpIcon from '@mui/icons-material/CloseSharp';
+import CrossIcon from '../../images/cross.svg';
 
-export const BannerInnerWrap = styled.div`
+export const BannerList = styled.ul`
   display: flex;
   animation: move 30s linear infinite;
 `;
 
-export const BannerTextWrap = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  padding-right: 24px;
+export const BannerTextItem = styled.li`
+  position: relative;
+  padding-right: 84px;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 2px;
+    right: 24px;
+    background-image: url(${CrossIcon});
+
+    @media screen and (min-width: 1280px) {
+      top: 19px;
+      right: 36px;
+    }
+  }
 
   @media screen and (min-width: 1280px) {
-    gap: 36px;
-    padding-right: 36px;
+    padding-right: 108px;
   }
 `;
 
 export const BannerText = styled.p`
+  padding-bottom: 2px;
   font-family: 'Right Grotesk';
   font-size: 36px;
   font-weight: 900;
   line-height: 1;
-  text-align: left;
   text-transform: uppercase;
   white-space: nowrap;
 
   @media screen and (min-width: 1280px) {
+    padding-bottom: 0;
     font-size: 64px;
   }
-`;
-
-export const CrossIcon = styled(CloseSharpIcon)`
-  width: ${({ width }) => width};
-  height: ${({ height }) => height};
-  fill: var(--primary-text-color);
 `;
