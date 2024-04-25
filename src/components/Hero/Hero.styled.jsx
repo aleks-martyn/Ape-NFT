@@ -36,7 +36,6 @@ export const StyledSection = styled.section`
 `;
 
 export const StyledContainer = styled.div`
-  position: relative;
   margin-left: auto;
   margin-right: auto;
   padding-left: 64px;
@@ -49,6 +48,7 @@ export const StyledContainer = styled.div`
   }
 
   @media screen and (min-width: 768px) {
+    position: relative;
     max-width: 768px;
     padding-left: 72px;
     padding-right: 72px;

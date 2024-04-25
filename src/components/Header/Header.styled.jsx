@@ -6,10 +6,10 @@ export const StyledHeader = styled.header`
   left: 0;
   right: 0;
   padding-top: 62px;
-  z-index: 1;
 
   @media screen and (min-width: 768px) {
     padding-top: 66px;
+    z-index: 1;
   }
 
   @media screen and (min-width: 1280px) {
