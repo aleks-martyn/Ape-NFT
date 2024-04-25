@@ -63,8 +63,8 @@
   ],
   "slogans": ["Destroy stereotypes", "HAVE NO LIMITS", "Break rules"],
   "socialLinks": [
-    { "url": "https://discord.com" },
-    { "url": "https://logomark.com" },
-    { "url": "https://www.twitter.com" }
+    { "url": "https://discord.com", "label": "Discord" },
+    { "url": "https://logomark.com", "label": "Logomark" },
+    { "url": "https://www.twitter.com", "label": "Twitter" }
   ]
 }

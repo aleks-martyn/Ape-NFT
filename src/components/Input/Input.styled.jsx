@@ -27,7 +27,7 @@ export const StyledLabel = styled.label`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: url(${({ name }) => getIcon(name)});
+    background-image: url(${({ htmlFor }) => getIcon(htmlFor)});
   }
 
   @media screen and (min-width: 1280px) {

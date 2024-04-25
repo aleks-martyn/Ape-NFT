@@ -9,6 +9,8 @@ export const Input = ({ id, placeholder }) => {
     formState: { errors },
   } = useFormContext();
 
+  const getLabel = id => (id === 'name' ? 'User name' : 'Wallet address');
+
   const getPatternMessage = id =>
     id === 'name' ? 'Wrong discord' : 'Wrong address';
 
@@ -18,9 +20,10 @@ export const Input = ({ id, placeholder }) => {
 
   return (
     <InputWrap>
-      <StyledLabel htmlFor={id} name={id}></StyledLabel>
+      <StyledLabel htmlFor={id}></StyledLabel>
 
       <StyledInput
+        aria-label={getLabel(id)}
         id={id}
         type="text"
         placeholder={placeholder}

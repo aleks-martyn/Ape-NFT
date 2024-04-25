@@ -9,9 +9,10 @@ export const LinkList = ({ items, component }) => {
 
   return (
     <List component={component}>
-      {items.map(({ iconFunc, url }, index) => (
+      {items.map(({ iconFunc, url, label }, index) => (
         <li key={index}>
           <SocialLink
+            aria-label={label}
             href={url}
             target="_blank"
             rel="noreferrer noopener"
@@ -30,6 +31,7 @@ LinkList.propTypes = {
     PropTypes.shape({
       iconFunc: PropTypes.func.isRequired,
       url: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,
   component: PropTypes.string.isRequired,
