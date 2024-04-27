@@ -9,6 +9,40 @@ const getWrapBgColor = (index, currentIndex) =>
 const getCursor = (index, currentIndex) =>
   index === currentIndex ? 'default' : 'pointer';
 
+const getTabletPadding = (index, currentIndex) =>
+  index === currentIndex ? '187px' : '18px';
+
+const getItemTabletWidth = (index, currentIndex) =>
+  index === currentIndex ? '592px' : '423px';
+
+const getDeskPadding = (index, currentIndex) =>
+  index === currentIndex ? '297px' : '24px';
+
+const getItemDeskWidth = (index, currentIndex) =>
+  index === currentIndex ? '1032px' : '759px';
+
+const getPadding = (index, currentIndex, screenDimension) => {
+  let padding;
+
+  switch (screenDimension) {
+    case '768pxTop':
+      padding = index === currentIndex ? '18px' : '0px';
+      break;
+
+    case '768pxBottom':
+      padding = index === currentIndex ? '23px' : '0px';
+      break;
+
+    case '1280px':
+      padding = index === currentIndex ? '24px' : '0px';
+      break;
+
+    default:
+      padding = index === currentIndex ? '8px' : '0px';
+  }
+  return padding;
+};
+
 export const QuestionWrap = styled.li`
   position: relative;
   display: flex;
@@ -41,7 +75,7 @@ export const QuestionWrap = styled.li`
     transition: color var(--tra);
 
     @media screen and (min-width: 768px) {
-      margin-right: 24px;
+      margin-right: 21px;
       padding-top: 2px;
       font-size: 16px;
       line-height: 1.69;
@@ -56,15 +90,53 @@ export const QuestionWrap = styled.li`
   }
 
   @media screen and (min-width: 768px) {
-    width: 592px;
-    padding: 18px 18px 23px 183px;
+    width: ${({ index, currentIndex }) =>
+      getItemTabletWidth(index, currentIndex)};
+    padding-top: 18px;
+    padding-right: 18px;
+    padding-bottom: 23px;
+    padding-left: ${({ index, currentIndex }) =>
+      getTabletPadding(index, currentIndex)};
     border-radius: 16px;
   }
 
   @media screen and (min-width: 1280px) {
-    width: 1032px;
-    padding: 24px 24px 24px 297px;
+    width: ${({ index, currentIndex }) =>
+      getItemDeskWidth(index, currentIndex)};
+    padding: 24px;
+    padding-left: ${({ index, currentIndex }) =>
+      getDeskPadding(index, currentIndex)};
     border-radius: 24px;
+  }
+
+  &:first-of-type {
+    padding-top: ${({ index, currentIndex }) =>
+      getPadding(index, currentIndex, '360px')};
+
+    @media screen and (min-width: 768px) {
+      padding-top: ${({ index, currentIndex }) =>
+        getPadding(index, currentIndex, '768pxTop')};
+    }
+
+    @media screen and (min-width: 1280px) {
+      padding-top: ${({ index, currentIndex }) =>
+        getPadding(index, currentIndex, '1280px')};
+    }
+  }
+
+  &:last-of-type {
+    padding-bottom: ${({ index, currentIndex }) =>
+      getPadding(index, currentIndex, '360px')};
+
+    @media screen and (min-width: 768px) {
+      padding-bottom: ${({ index, currentIndex }) =>
+        getPadding(index, currentIndex, '768pxBottom')};
+    }
+
+    @media screen and (min-width: 1280px) {
+      padding-bottom: ${({ index, currentIndex }) =>
+        getPadding(index, currentIndex, '1280px')};
+    }
   }
 `;
 
