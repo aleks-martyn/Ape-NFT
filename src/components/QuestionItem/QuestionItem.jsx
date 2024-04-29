@@ -18,11 +18,26 @@ export const QuestionItem = ({
   currentIndex,
   onClick,
 }) => {
+  const tabIndex = index === currentIndex ? '-1' : '0';
+
+  const handleKeyDown = event => {
+    if (event.code === 'Enter' || 'NumpadEnter') onClick();
+  };
+
+  const onFocusHandler = () =>
+    window.addEventListener('keydown', handleKeyDown);
+
+  const onBlurHandler = () =>
+    window.removeEventListener('keydown', handleKeyDown);
+
   return (
     <QuestionWrap
       index={index}
       currentIndex={currentIndex}
       onClick={() => onClick()}
+      tabIndex={tabIndex}
+      onFocus={onFocusHandler}
+      onBlur={onBlurHandler}
     >
       <ImageThumb index={index} currentIndex={currentIndex}>
         <Image loading="lazy" src={src} alt={alt} srcSet={srcSet} />
