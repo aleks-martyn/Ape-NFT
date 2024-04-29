@@ -9,11 +9,13 @@ export const Wrap = styled.div`
 `;
 
 export const StyledBtn = styled.button`
+  height: 30px;
   border: none;
   background-color: transparent;
 `;
 
 export const BtnLabel = styled.span`
+  display: inline-flex;
   color: var(--primary-text-color);
   font-family: Biro Script Plus;
   font-size: 24px;
