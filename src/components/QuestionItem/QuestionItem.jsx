@@ -21,7 +21,7 @@ export const QuestionItem = ({
   const tabIndex = index === currentIndex ? '-1' : '0';
 
   const handleKeyDown = event => {
-    if (event.code === 'Enter' || 'NumpadEnter') onClick();
+    if (event.code === 'Enter' || event.code === 'NumpadEnter') onClick();
   };
 
   const onFocusHandler = () =>
