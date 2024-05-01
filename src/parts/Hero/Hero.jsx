@@ -1,3 +1,4 @@
+import { scroller } from 'react-scroll';
 import textContent from '../../text-content.json';
 import { ImageSet } from 'components/ImageSet';
 import { images } from 'heroImageSet';
@@ -17,6 +18,18 @@ export const Hero = () => {
     hero: { firstText, secondText, thirdText },
   } = textContent;
 
+  const handleKeyDown = event => {
+    if (event.code === 'Enter' || event.code === 'NumpadEnter') {
+      scroller.scrollTo('mint', { smooth: true, duration: 500 });
+    }
+  };
+
+  const onFocusHandler = () =>
+    window.addEventListener('keydown', handleKeyDown);
+
+  const onBlurHandler = () =>
+    window.removeEventListener('keydown', handleKeyDown);
+
   return (
     <StyledSection>
       <StyledContainer>
@@ -32,7 +45,14 @@ export const Hero = () => {
         <ImageSet id="hero" pictures={images} alt="Hero Ape" loading="eager" />
 
         <InnerWrap>
-          <StyledLink to="mint" smooth={true} duration={500}>
+          <StyledLink
+            to="mint"
+            smooth={true}
+            duration={500}
+            tabIndex={0}
+            onFocus={onFocusHandler}
+            onBlur={onBlurHandler}
+          >
             <LinkLabel>MEET APES</LinkLabel>
           </StyledLink>
 

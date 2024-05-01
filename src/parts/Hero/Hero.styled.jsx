@@ -136,6 +136,7 @@ export const InnerWrap = styled.div`
 `;
 
 export const StyledLink = styled(Link)`
+  display: inline-block;
   padding: 10px 70px 12px;
   border-radius: 8px;
   border: none;
