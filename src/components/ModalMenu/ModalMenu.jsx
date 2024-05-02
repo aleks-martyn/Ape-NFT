@@ -6,6 +6,7 @@ import { LinkList } from 'components/LinkList';
 import textContent from '../../text-content.json';
 import { icons } from 'socialIcons';
 import {
+  Overlay,
   ModalWin,
   StyledContainer,
   Wrap,
@@ -41,6 +42,7 @@ export const ModalMenu = ({ onClose }) => {
   } = textContent;
 
   return createPortal(
+    <Overlay>
     <ModalWin>
       <StyledContainer>
         <Wrap>
@@ -74,7 +76,8 @@ export const ModalMenu = ({ onClose }) => {
 
         <LowerText>{text}</LowerText>
       </StyledContainer>
-    </ModalWin>,
+      </ModalWin>
+      </Overlay>,
     modalRoot
   );
 };

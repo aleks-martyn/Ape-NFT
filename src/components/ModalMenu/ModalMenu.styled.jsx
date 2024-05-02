@@ -1,18 +1,25 @@
 import { Link } from 'react-scroll';
 import styled from '@emotion/styled';
 
-export const ModalWin = styled.div`
+export const Overlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  padding: 62px 0 20px;
   background-color: var(--background-color);
   z-index: 2;
 
   @media screen and (min-width: 768px) {
     background-color: transparent;
+  }
+`;
+
+export const ModalWin = styled.div`
+  padding-top: 62px;
+  padding-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
     padding-top: 66px;
   }
 
@@ -22,18 +29,19 @@ export const ModalWin = styled.div`
 `;
 
 export const StyledContainer = styled.div`
-  position: relative;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
   padding-left: 16px;
   padding-right: 16px;
+  width: 100%;
 
   @media screen and (min-width: 480px) {
     max-width: 480px;
   }
 
   @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
     max-width: 768px;
     padding-left: 28px;
     padding-right: 28px;
@@ -49,19 +57,6 @@ export const StyledContainer = styled.div`
 export const Wrap = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 16px;
-
-  @media screen and (min-width: 768px) {
-    width: 712px;
-    margin-bottom: 0;
-    justify-content: flex-end;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 1214px;
-    margin-bottom: 0;
-    justify-content: flex-end;
-  }
 `;
 
 export const InnerWrap = styled.div`
@@ -70,29 +65,13 @@ export const InnerWrap = styled.div`
   gap: 8px;
 `;
 
-export const BtnLabel = styled.span`
-  font-family: 'Messina Sans Mono';
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.17;
-  color: var(--primary-text-color);
-  transition: color var(--tra), text-decoration var(--tra);
-
-  @media screen and (min-width: 768px) {
-    color: var(--secondary-text-color);
-  }
-
-  @media screen and (min-width: 1280px) {
-    font-size: 16px;
-    line-height: 1.19;
-  }
-`;
-
 export const CloseBtn = styled.button`
+  display: inline-flex;
   width: 48px;
   height: 48px;
-  padding-left: 2px;
-  padding-right: 2px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
   border-radius: 8px;
   border: none;
   background-color: var(--modal-btn-bg-color);
@@ -120,58 +99,63 @@ export const CloseBtn = styled.button`
   }
 `;
 
-export const MenuLinkList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
+export const BtnLabel = styled.span`
+  font-family: 'Messina Sans Mono';
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.17;
+  color: var(--primary-text-color);
+  transition: color var(--tra), text-decoration var(--tra);
 
   @media screen and (min-width: 768px) {
-    width: 614px;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 0;
+    color: var(--secondary-text-color);
   }
 
   @media screen and (min-width: 1280px) {
-    width: 1062px;
+    font-size: 16px;
+    line-height: 1.19;
+  }
+`;
+
+export const MenuLinkList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
   }
 `;
 
 export const MenuListItem = styled.li`
   @media screen and (min-width: 768px) {
-    display: flex;
-    height: 48px;
-    width: 48px;
-    justify-content: center;
-    align-items: center;
+    background-color: var(--btn-color);
 
-    @media screen and (min-width: 768px) {
-      background-color: var(--btn-color);
-
-      &:first-of-type {
-        border-top-left-radius: 8px;
-        border-bottom-left-radius: 8px;
-      }
+    &:first-of-type {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
     }
+  }
 
-    @media screen and (min-width: 1280px) {
-      width: 80px;
-      height: 80px;
-
-      &:first-of-type {
-        border-top-left-radius: 12px;
-        border-bottom-left-radius: 12px;
-      }
+  @media screen and (min-width: 1280px) {
+    &:first-of-type {
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
     }
   }
 `;
 
 export const MenuLink = styled(Link)`
-  text-decoration: none;
+  display: inline-flex;
+  box-sizing: border-box;
+  width: 100px;
+  height: 53px;
+  justify-content: center;
+  align-items: center;
   color: var(--primary-text-color);
-  transition: color var(--tra), text-decoration(--tra);
   cursor: pointer;
+  text-decoration: none;
+  transition: color var(--tra), text-decoration(--tra);
 
   &:hover span {
     color: var(--accent-color);
@@ -179,6 +163,8 @@ export const MenuLink = styled(Link)`
   }
 
   @media screen and (min-width: 768px) {
+    width: 48px;
+    height: 48px;
     color: var(--secondary-text-color);
 
     &:hover span {
@@ -186,6 +172,10 @@ export const MenuLink = styled(Link)`
       text-decoration: underline;
     }
   }
+
+  @media screen and (min-width: 1280px) {
+      width: 80px;
+      height: 80px;
 `;
 
 export const LinkName = styled.span`
@@ -207,17 +197,10 @@ export const LinkName = styled.span`
 `;
 
 export const StyledNav = styled.nav`
-  margin-bottom: 240px;
+  margin-bottom: 186px;
 
   @media screen and (min-width: 768px) {
-    position: absolute;
-    top: 0px;
-    left: 78px;
     margin-bottom: 0;
-  }
-
-  @media screen and (min-width: 1280px) {
-    left: 104px;
   }
 `;
 
