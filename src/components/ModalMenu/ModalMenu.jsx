@@ -43,41 +43,41 @@ export const ModalMenu = ({ onClose }) => {
 
   return createPortal(
     <Overlay>
-    <ModalWin>
-      <StyledContainer>
-        <Wrap>
-          <LogoLink onClick={() => onClose()} component="menu" />
+      <ModalWin>
+        <StyledContainer>
+          <Wrap>
+            <LogoLink onClick={() => onClose()} component="menu" />
 
-          <InnerWrap>
-            <CloseBtn type="button" onClick={() => onClose()}>
-              <BtnLabel>CLOSE</BtnLabel>
-            </CloseBtn>
+            <InnerWrap>
+              <CloseBtn type="button" onClick={() => onClose()}>
+                <BtnLabel>CLOSE</BtnLabel>
+              </CloseBtn>
 
-            <LinkList items={icons} component="menu" />
-          </InnerWrap>
-        </Wrap>
+              <LinkList items={icons} component="menu" />
+            </InnerWrap>
+          </Wrap>
 
-        <StyledNav>
-          <MenuLinkList>
-            {sectionNames.map((name, index) => (
-              <MenuListItem key={index}>
-                <MenuLink
-                  to={name}
-                  smooth={true}
-                  duration={500}
-                  onClick={() => onClose()}
-                >
-                  <LinkName>{name}</LinkName>
-                </MenuLink>
-              </MenuListItem>
-            ))}
-          </MenuLinkList>
-        </StyledNav>
+          <StyledNav>
+            <MenuLinkList>
+              {sectionNames.map((name, index) => (
+                <MenuListItem key={index}>
+                  <MenuLink
+                    to={name}
+                    smooth={true}
+                    duration={500}
+                    onClick={() => onClose()}
+                  >
+                    <LinkName>{name}</LinkName>
+                  </MenuLink>
+                </MenuListItem>
+              ))}
+            </MenuLinkList>
+          </StyledNav>
 
-        <LowerText>{text}</LowerText>
-      </StyledContainer>
+          <LowerText>{text}</LowerText>
+        </StyledContainer>
       </ModalWin>
-      </Overlay>,
+    </Overlay>,
     modalRoot
   );
 };
