@@ -35,7 +35,10 @@ export const Header = () => {
         </Wrap>
       </StyledContainer>
 
-      {isShowModal && <ModalMenu onClose={() => setIsShowModal(false)} />}
+      <ModalMenu
+        onClose={() => setIsShowModal(false)}
+        isShowModal={isShowModal}
+      />
     </StyledHeader>
   );
 };
