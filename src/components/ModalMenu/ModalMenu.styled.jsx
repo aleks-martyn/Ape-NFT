@@ -1,6 +1,11 @@
 import { Link } from 'react-scroll';
 import styled from '@emotion/styled';
 
+const getOpacity = isShowModal => (isShowModal ? 1 : 0);
+const getVisibility = isShowModal => (isShowModal ? 'visible' : 'hidden');
+const getTranslate = isShowModal => (isShowModal ? 0 : '100%');
+const getTimingFunc = isShowModal => (isShowModal ? 'linear' : 'easy');
+
 export const Overlay = styled.div`
   position: fixed;
   top: 0;
@@ -9,18 +14,34 @@ export const Overlay = styled.div`
   height: 100vh;
   background-color: var(--background-color);
   z-index: 2;
+  opacity: ${({ isShowModal }) => getOpacity(isShowModal)};
+  visibility: ${({ isShowModal }) => getVisibility(isShowModal)};
+  transition-duration: 100ms;
+  transition-timing-function: cubic-bezier(0.01, 1.24, 1, 0.7);
+  transition-property: opacity, visibility;
 
   @media screen and (min-width: 768px) {
     background-color: transparent;
+    transition-timing-function: linear;
   }
 `;
 
 export const ModalWin = styled.div`
   padding-top: 62px;
   padding-bottom: 20px;
+  opacity: ${({ isShowModal }) => getOpacity(isShowModal)};
+  visibility: ${({ isShowModal }) => getVisibility(isShowModal)};
+  transform: translateX(${({ isShowModal }) => getTranslate(isShowModal)});
+  transition-timing-function: ease;
+  transition-duration: 250ms;
+  transition-property: opacity, visibility, transform;
 
   @media screen and (min-width: 768px) {
     padding-top: 66px;
+    transition-timing-function: linear;
+    transition-duration: 100ms;
+    transition-property: opacity, visibility;
+    transform: none;
   }
 
   @media screen and (min-width: 1280px) {
@@ -117,6 +138,15 @@ export const BtnLabel = styled.span`
   }
 `;
 
+export const StyledNav = styled.nav`
+  margin-bottom: 186px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    overflow-x: hidden;
+  }
+`;
+
 export const MenuLinkList = styled.ul`
   display: flex;
   flex-direction: column;
@@ -124,6 +154,13 @@ export const MenuLinkList = styled.ul`
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
+    opacity: ${({ isShowModal }) => getOpacity(isShowModal)};
+    visibility: ${({ isShowModal }) => getVisibility(isShowModal)};
+    transform: translateX(${({ isShowModal }) => getTranslate(isShowModal)});
+    transition-timing-function: ${({ isShowModal }) =>
+      getTimingFunc(isShowModal)};
+    transition-duration: 200ms;
+    transition-property: opacity, visibility, transform;
   }
 `;
 
@@ -193,14 +230,6 @@ export const LinkName = styled.span`
   @media screen and (min-width: 1280px) {
     font-size: 16px;
     line-height: 1.19;
-  }
-`;
-
-export const StyledNav = styled.nav`
-  margin-bottom: 186px;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 0;
   }
 `;
 

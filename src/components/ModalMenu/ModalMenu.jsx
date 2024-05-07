@@ -23,7 +23,7 @@ import {
 
 const modalRoot = document.getElementById('modal-root');
 
-export const ModalMenu = ({ onClose }) => {
+export const ModalMenu = ({ onClose, isShowModal }) => {
   useEffect(() => {
     const handleKeyDown = event => {
       if (event.code === 'Escape') onClose();
@@ -42,14 +42,18 @@ export const ModalMenu = ({ onClose }) => {
   } = textContent;
 
   return createPortal(
-    <Overlay>
-      <ModalWin>
+    <Overlay isShowModal={isShowModal}>
+      <ModalWin isShowModal={isShowModal}>
         <StyledContainer>
           <Wrap>
             <LogoLink onClick={() => onClose()} component="menu" />
 
             <InnerWrap>
-              <CloseBtn type="button" onClick={() => onClose()}>
+              <CloseBtn
+                type="button"
+                onClick={() => onClose()}
+                isShowModal={isShowModal}
+              >
                 <BtnLabel>CLOSE</BtnLabel>
               </CloseBtn>
 
@@ -58,7 +62,7 @@ export const ModalMenu = ({ onClose }) => {
           </Wrap>
 
           <StyledNav>
-            <MenuLinkList>
+            <MenuLinkList isShowModal={isShowModal}>
               {sectionNames.map((name, index) => (
                 <MenuListItem key={index}>
                   <MenuLink
@@ -84,4 +88,5 @@ export const ModalMenu = ({ onClose }) => {
 
 ModalMenu.propTypes = {
   onClose: PropTypes.func.isRequired,
+  isShowModal: PropTypes.bool.isRequired,
 };

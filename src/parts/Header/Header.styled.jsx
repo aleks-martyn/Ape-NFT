@@ -51,24 +51,21 @@ export const InnerWrap = styled.div`
   flex-direction: column;
   gap: 8px;
 
+  @media screen and (min-width: 768px) {
+    position: fixed;
+    top: 66px;
+    right: 50%;
+    translate: 356px;
+  }
+
   @media screen and (min-width: 1280px) {
     gap: 15px;
+    top: 40px;
+    translate: 608px;
   }
 `;
 
-export const BtnLabel = styled.span`
-  font-family: 'Messina Sans Mono';
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.17;
-  transition: color var(--tra), text-decoration var(--tra);
-
-  @media screen and (min-width: 1280px) {
-    font-size: 16px;
-    line-height: 1.19;
-  }
-`;
-
+const getOpacity = isShowModal => (isShowModal ? 0 : 1);
 const getVisibility = isShowModal => (isShowModal ? 'hidden' : 'visible');
 
 export const MenuBtn = styled.button`
@@ -84,12 +81,29 @@ export const MenuBtn = styled.button`
   }
 
   @media screen and (min-width: 768px) {
+    opacity: ${({ isShowModal }) => getOpacity(isShowModal)};
     visibility: ${({ isShowModal }) => getVisibility(isShowModal)};
+    transition-duration: 100ms;
+    transition-timing-function: linear;
+    transition-property: opacity, visibility;
   }
 
   @media screen and (min-width: 1280px) {
     width: 80px;
     height: 80px;
     border-radius: 12px;
+  }
+`;
+
+export const BtnLabel = styled.span`
+  font-family: 'Messina Sans Mono';
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.17;
+  transition: color var(--tra), text-decoration var(--tra);
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.19;
   }
 `;
