@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import { scroller } from 'react-scroll';
 import { LogoLink } from 'components/LogoLink';
 import { LinkList } from 'components/LinkList';
 import textContent from '../../text-content.json';
@@ -63,18 +64,36 @@ export const ModalMenu = ({ onClose, isShowModal }) => {
 
           <StyledNav>
             <MenuLinkList isShowModal={isShowModal}>
-              {sectionNames.map((name, index) => (
-                <MenuListItem key={index}>
-                  <MenuLink
-                    to={name}
-                    smooth={true}
-                    duration={500}
-                    onClick={() => onClose()}
-                  >
-                    <LinkName>{name}</LinkName>
-                  </MenuLink>
-                </MenuListItem>
-              ))}
+              {sectionNames.map((name, index) => {
+                const handleKeyDown = event => {
+                  if (event.code === 'Enter' || event.code === 'NumpadEnter') {
+                    scroller.scrollTo(name, { smooth: true, duration: 500 });
+                    onClose();
+                  }
+                };
+
+                const onFocusHandler = () =>
+                  window.addEventListener('keydown', handleKeyDown);
+
+                const onBlurHandler = () =>
+                  window.removeEventListener('keydown', handleKeyDown);
+
+                return (
+                  <MenuListItem key={index}>
+                    <MenuLink
+                      to={name}
+                      smooth={true}
+                      duration={500}
+                      onClick={() => onClose()}
+                      tabIndex={0}
+                      onFocus={onFocusHandler}
+                      onBlur={onBlurHandler}
+                    >
+                      <LinkName>{name}</LinkName>
+                    </MenuLink>
+                  </MenuListItem>
+                );
+              })}
             </MenuLinkList>
           </StyledNav>
 
