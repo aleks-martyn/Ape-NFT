@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { QuestionItem } from 'components/QuestionItem';
-import { StyledList } from './FaqSection.styled';
 import textContent from '../../text-content.json';
 import { createItems } from 'utils/createItems';
 import { images } from 'faqImages';
+import { StyledList } from './FaqSection.styled';
 
 export const QuestionList = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -66,6 +66,7 @@ export const InnerWrap = styled.div`
 `;
 
 const getOpacity = isShowModal => (isShowModal ? 0 : 1);
+
 const getVisibility = isShowModal => (isShowModal ? 'hidden' : 'visible');
 
 export const MenuBtn = styled.button`

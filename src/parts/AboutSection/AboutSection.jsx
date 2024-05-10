@@ -1,9 +1,9 @@
 import { useMediaQuery } from 'react-responsive';
-import textContent from '../../text-content.json';
-import { ImageSet } from 'components/ImageSet';
-import { images } from 'aboutImageSet';
 import { Container } from 'components/Container';
+import { ImageSet } from 'components/ImageSet';
 import { Banner } from 'components/Banner';
+import textContent from '../../text-content.json';
+import { images } from 'aboutImageSet';
 import {
   StyledSection,
   Wrapper,
