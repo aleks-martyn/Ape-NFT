@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import {
   Wrap,
+  InnerWrap,
   CardText,
   CardTitle,
   StyledLink,
@@ -8,28 +9,29 @@ import {
 } from './MapCard.styled';
 
 export const MapCard = ({ title, text, index }) => (
-  <>
-    {index !== 3 ? (
-      <Wrap title={title}>
-        <CardText>{text}</CardText>
+  <Wrap>
+    <InnerWrap index={index}>
+      {index !== 3 ? (
+        <>
+          <CardText>{text}</CardText>
 
-        <CardTitle>{title}</CardTitle>
-      </Wrap>
-    ) : (
-      <StyledLink
-        href="https://en.wikipedia.org/wiki/Non-fungible_token"
-        target="_blank"
-        rel="noreferrer noopener"
-        title={title}
-      >
-        <Linklabel>
-          Learn
-          <br /> more
-          <br /> in mind map
-        </Linklabel>
-      </StyledLink>
-    )}
-  </>
+          <CardTitle>{title}</CardTitle>
+        </>
+      ) : (
+        <StyledLink
+          href="https://en.wikipedia.org/wiki/Non-fungible_token"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <Linklabel>
+            Learn
+            <br /> more
+            <br /> in mind map
+          </Linklabel>
+        </StyledLink>
+      )}
+    </InnerWrap>
+  </Wrap>
 );
 
 MapCard.propTypes = {
