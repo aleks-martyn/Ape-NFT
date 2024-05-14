@@ -10,27 +10,25 @@ import {
 
 export const MapCard = ({ title, text, index }) => (
   <Wrap>
-    <InnerWrap index={index}>
-      {index !== 3 ? (
-        <>
-          <CardText>{text}</CardText>
+    {index !== 3 ? (
+      <InnerWrap index={index}>
+        <CardText>{text}</CardText>
 
-          <CardTitle>{title}</CardTitle>
-        </>
-      ) : (
-        <StyledLink
-          href="https://en.wikipedia.org/wiki/Non-fungible_token"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <Linklabel>
-            Learn
-            <br /> more
-            <br /> in mind map
-          </Linklabel>
-        </StyledLink>
-      )}
-    </InnerWrap>
+        <CardTitle>{title}</CardTitle>
+      </InnerWrap>
+    ) : (
+      <StyledLink
+        href="https://en.wikipedia.org/wiki/Non-fungible_token"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <Linklabel>
+          Learn
+          <br /> more
+          <br /> in mind map
+        </Linklabel>
+      </StyledLink>
+    )}
   </Wrap>
 );
 
