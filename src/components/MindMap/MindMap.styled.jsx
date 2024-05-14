@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 export const Wrap = styled.ul`
   display: flex;
+  transform: translateX(-${({ slide }) => slide * 100}%);
   transition: transform var(--tra);
 
   @media screen and (min-width: 768px) {
