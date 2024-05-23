@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { ModalMenu } from 'components/ModalMenu';
 import { LogoLink } from 'components/LogoLink';
 import { LinkList } from 'components/LinkList';
@@ -16,11 +17,13 @@ export const Header = () => {
   const [isShowModal, setIsShowModal] = useState(false);
   const [scrollY, setScrollY] = useState(0);
 
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
 
-      if (isShowModal) {
+      if (!isMobile && isShowModal) {
         setIsShowModal(false);
       }
     };
@@ -30,7 +33,7 @@ export const Header = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [isShowModal]);
+  }, [isMobile, isShowModal]);
 
   return (
     <StyledHeader>
