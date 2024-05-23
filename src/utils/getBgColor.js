@@ -1,7 +1,7 @@
 export const getBgColor = (
   componentName,
-  scrollPosition = 0,
-  changeColorPosition = 0
+  scrollPosition,
+  changeColorPosition
 ) => {
   if (componentName === 'header') {
     if (scrollPosition > changeColorPosition) {
