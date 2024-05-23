@@ -1,4 +1,12 @@
 import styled from '@emotion/styled';
+import { getBtnBgColor } from 'utils/getBtnBgColor';
+import { getBtnLabelColor } from 'utils/getBtnLabelColor';
+import { getBtnHoverColor } from 'utils/getBtnHoverColor';
+import {
+  MOBILE_CHANGE_POINT,
+  TABLET_CHANGE_POINT,
+  DESK_CHANGE_POINT,
+} from 'constants';
 
 export const StyledHeader = styled.header`
   position: absolute;
@@ -47,12 +55,19 @@ export const Wrap = styled.div`
 `;
 
 export const InnerWrap = styled.div`
+  position: fixed;
+  top: 62px;
+  right: 16px;
   display: flex;
   flex-direction: column;
   gap: 8px;
 
+  @media screen and (min-width: 481px) and (max-width: 767px) {
+    right: 50%;
+    translate: 224px;
+  }
+
   @media screen and (min-width: 768px) {
-    position: fixed;
     top: 66px;
     right: 50%;
     translate: 356px;
@@ -74,16 +89,28 @@ export const MenuBtn = styled.button`
   height: 48px;
   border-radius: 8px;
   border: none;
-  background-color: var(--btn-color);
+  background-color: ${({ scrolly }) =>
+    getBtnBgColor(scrolly, MOBILE_CHANGE_POINT)};
 
   &:hover span {
-    color: var(--primary-text-color);
+    color: ${({ scrolly }) => getBtnHoverColor(scrolly, MOBILE_CHANGE_POINT)};
     text-decoration: underline;
+    transition: color var(--tra), text-decoration var(--tra);
+
+    @media screen and (min-width: 768px) {
+      color: ${({ scrolly }) => getBtnHoverColor(scrolly, TABLET_CHANGE_POINT)};
+    }
+
+    @media screen and (min-width: 1280px) {
+      color: ${({ scrolly }) => getBtnHoverColor(scrolly, DESK_CHANGE_POINT)};
+    }
   }
 
   @media screen and (min-width: 768px) {
     opacity: ${({ isShowModal }) => getOpacity(isShowModal)};
     visibility: ${({ isShowModal }) => getVisibility(isShowModal)};
+    background-color: ${({ scrolly }) =>
+      getBtnBgColor(scrolly, TABLET_CHANGE_POINT)};
     transition-duration: 100ms;
     transition-timing-function: linear;
     transition-property: opacity, visibility;
@@ -93,6 +120,8 @@ export const MenuBtn = styled.button`
     width: 80px;
     height: 80px;
     border-radius: 12px;
+    background-color: ${({ scrolly }) =>
+      getBtnBgColor(scrolly, DESK_CHANGE_POINT)};
   }
 `;
 
@@ -101,9 +130,14 @@ export const BtnLabel = styled.span`
   font-weight: 600;
   font-size: 12px;
   line-height: 1.17;
-  transition: color var(--tra), text-decoration var(--tra);
+  color: ${({ scrolly }) => getBtnLabelColor(scrolly, MOBILE_CHANGE_POINT)};
+
+  @media screen and (min-width: 768px) {
+    color: ${({ scrolly }) => getBtnLabelColor(scrolly, TABLET_CHANGE_POINT)};
+  }
 
   @media screen and (min-width: 1280px) {
+    color: ${({ scrolly }) => getBtnLabelColor(scrolly, DESK_CHANGE_POINT)};
     font-size: 16px;
     line-height: 1.19;
   }
