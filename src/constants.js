@@ -1,3 +1,5 @@
+export const MOBILE_CHANGE_POINT = 512;
+
 export const TABLET_CHANGE_POINT = 386;
 
 export const TABLET_LINK_HEIGHT = 48;
