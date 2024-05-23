@@ -9,7 +9,8 @@ import {
   LinkName,
 } from './Navigation.styled';
 
-export const Navigation = ({ onClose, isShowModal }) => {
+export const Navigation = props => {
+  const { onClose, isShowModal, ...rest } = props;
   const { sectionNames } = textContent;
 
   return (
@@ -30,8 +31,9 @@ export const Navigation = ({ onClose, isShowModal }) => {
             window.removeEventListener('keydown', handleKeyDown);
 
           return (
-            <MenuListItem key={index}>
+            <MenuListItem {...rest} key={index}>
               <MenuLink
+                {...rest}
                 to={name}
                 smooth={true}
                 duration={500}
@@ -53,4 +55,5 @@ export const Navigation = ({ onClose, isShowModal }) => {
 Navigation.propTypes = {
   onClose: PropTypes.func.isRequired,
   isShowModal: PropTypes.bool.isRequired,
+  scrolly: PropTypes.number.isRequired,
 };

@@ -1,5 +1,9 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-scroll';
+import { getBtnBgColor } from 'utils/getBtnBgColor';
+import { getBtnLabelColor } from 'utils/getBtnLabelColor';
+import { getBtnHoverColor } from 'utils/getBtnHoverColor';
+import { TABLET_CHANGE_POINT, DESK_CHANGE_POINT } from 'constants';
 
 export const StyledNav = styled.nav`
   margin-bottom: 186px;
@@ -13,7 +17,6 @@ export const StyledNav = styled.nav`
 const getOpacity = isShowModal => (isShowModal ? 1 : 0);
 const getVisibility = isShowModal => (isShowModal ? 'visible' : 'hidden');
 const getTranslate = isShowModal => (isShowModal ? 0 : '100%');
-
 const getTimingFunc = isShowModal => (isShowModal ? 'linear' : 'easy');
 
 export const MenuLinkList = styled.ul`
@@ -35,7 +38,8 @@ export const MenuLinkList = styled.ul`
 
 export const MenuListItem = styled.li`
   @media screen and (min-width: 768px) {
-    background-color: var(--btn-color);
+    background-color: ${({ scrolly }) =>
+      getBtnBgColor(scrolly, TABLET_CHANGE_POINT)};
 
     &:first-of-type {
       border-top-left-radius: 8px;
@@ -44,6 +48,9 @@ export const MenuListItem = styled.li`
   }
 
   @media screen and (min-width: 1280px) {
+    background-color: ${({ scrolly }) =>
+      getBtnBgColor(scrolly, DESK_CHANGE_POINT)};
+
     &:first-of-type {
       border-top-left-radius: 12px;
       border-bottom-left-radius: 12px;
@@ -66,22 +73,27 @@ export const MenuLink = styled(Link)`
   &:hover span {
     color: var(--accent-color);
     text-decoration: underline;
+    transition: color var(--tra), text-decoration var(--tra);
+
+    @media screen and (min-width: 768px) {
+      color: ${({ scrolly }) => getBtnHoverColor(scrolly, TABLET_CHANGE_POINT)};
+    }
+
+    @media screen and (min-width: 1280px) {
+      color: ${({ scrolly }) => getBtnHoverColor(scrolly, DESK_CHANGE_POINT)};
+    }
   }
 
   @media screen and (min-width: 768px) {
     width: 48px;
     height: 48px;
-    color: var(--secondary-text-color);
-
-    &:hover span {
-      color: var(--primary-text-color);
-      text-decoration: underline;
-    }
+    color: ${({ scrolly }) => getBtnLabelColor(scrolly, TABLET_CHANGE_POINT)};
   }
 
   @media screen and (min-width: 1280px) {
       width: 80px;
       height: 80px;
+      color: ${({ scrolly }) => getBtnLabelColor(scrolly, DESK_CHANGE_POINT)};
 `;
 
 export const LinkName = styled.span`
@@ -89,7 +101,6 @@ export const LinkName = styled.span`
   font-size: 24px;
   line-height: 1.21;
   text-transform: uppercase;
-  transition: color var(--tra);
 
   @media screen and (min-width: 768px) {
     font-size: 12px;
