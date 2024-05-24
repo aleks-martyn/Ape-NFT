@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { scroller } from 'react-scroll';
 import { LogoLink } from 'components/LogoLink';
 import { LinkList } from 'components/LinkList';
+import { Navigation } from 'components/Navigation';
 import textContent from '../../text-content.json';
 import { icons } from 'socialIcons';
 import {
@@ -14,17 +14,14 @@ import {
   BtnLabel,
   CloseBtn,
   InnerWrap,
-  MenuLinkList,
-  MenuListItem,
-  MenuLink,
-  LinkName,
-  StyledNav,
   LowerText,
 } from './ModalMenu.styled';
 
 const modalRoot = document.getElementById('modal-root');
 
-export const ModalMenu = ({ onClose, isShowModal }) => {
+export const ModalMenu = props => {
+  const { onClose, isShowModal, ...rest } = props;
+
   useEffect(() => {
     const handleKeyDown = event => {
       if (event.code === 'Escape') onClose();
@@ -39,7 +36,6 @@ export const ModalMenu = ({ onClose, isShowModal }) => {
 
   const {
     footer: { text },
-    sectionNames,
   } = textContent;
 
   return createPortal(
@@ -51,51 +47,20 @@ export const ModalMenu = ({ onClose, isShowModal }) => {
 
             <InnerWrap>
               <CloseBtn
+                {...rest}
                 type="button"
                 onClick={() => onClose()}
                 isShowModal={isShowModal}
+                tabIndex={0}
               >
-                <BtnLabel>CLOSE</BtnLabel>
+                <BtnLabel {...rest}>CLOSE</BtnLabel>
               </CloseBtn>
 
-              <LinkList items={icons} component="menu" />
+              <LinkList {...rest} items={icons} component="menu" />
             </InnerWrap>
           </Wrap>
 
-          <StyledNav>
-            <MenuLinkList isShowModal={isShowModal}>
-              {sectionNames.map((name, index) => {
-                const handleKeyDown = event => {
-                  if (event.code === 'Enter' || event.code === 'NumpadEnter') {
-                    scroller.scrollTo(name, { smooth: true, duration: 500 });
-                    onClose();
-                  }
-                };
-
-                const onFocusHandler = () =>
-                  window.addEventListener('keydown', handleKeyDown);
-
-                const onBlurHandler = () =>
-                  window.removeEventListener('keydown', handleKeyDown);
-
-                return (
-                  <MenuListItem key={index}>
-                    <MenuLink
-                      to={name}
-                      smooth={true}
-                      duration={500}
-                      onClick={() => onClose()}
-                      tabIndex={0}
-                      onFocus={onFocusHandler}
-                      onBlur={onBlurHandler}
-                    >
-                      <LinkName>{name}</LinkName>
-                    </MenuLink>
-                  </MenuListItem>
-                );
-              })}
-            </MenuLinkList>
-          </StyledNav>
+          <Navigation {...rest} onClose={onClose} isShowModal={isShowModal} />
 
           <LowerText>{text}</LowerText>
         </StyledContainer>
@@ -108,4 +73,5 @@ export const ModalMenu = ({ onClose, isShowModal }) => {
 ModalMenu.propTypes = {
   onClose: PropTypes.func.isRequired,
   isShowModal: PropTypes.bool.isRequired,
+  scrolly: PropTypes.number.isRequired,
 };
